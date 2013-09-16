@@ -18,28 +18,26 @@ describe(@"CRDIContainerSpecs", ^{
         __block CRDIContainer *defaultContainer = nil;
         
         beforeEach(^{
-            defaultContainer = [CRDIContainer defaultContainer];
+            defaultContainer = [CRDIContainer new];
+            [CRDIContainer setDefaultContainer:defaultContainer];
         });
         
         it(@"defaultContainer should not be nil", ^{
-            defaultContainer = [CRDIContainer defaultContainer];
-            [[defaultContainer shouldNot] beNil];
+            [[[CRDIContainer defaultContainer] shouldNot] beNil];
         });
         
-        it(@"default container should be equal to def. contaienr var", ^{
+        it(@"container should be euqal to defaultContainer", ^{
             CRDIContainer *container = [CRDIContainer defaultContainer];
             
             [[container should] equal:defaultContainer];
         });
         
-        it(@"defaultContainer should be nil", ^{
-            CRDIContainer *container = [CRDIContainer defaultContainer];
+        it(@"defaultContainer should raise due to nil", ^{
+            [CRDIContainer setDefaultContainer:nil];
             
-            [container setDefaultContainer:nil];
-            
-            CRDIContainer *nilledContainer = [CRDIContainer defaultContainer];
-            
-            [[nilledContainer should] beNil];
+            [[theBlock(^{
+                [CRDIContainer defaultContainer];
+            }) should] raise];
         });
     });
     

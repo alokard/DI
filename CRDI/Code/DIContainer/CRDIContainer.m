@@ -20,10 +20,7 @@ static CRDIContainer *_defaultContainer = nil;
 
 + (CRDIContainer *)defaultContainer
 {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _defaultContainer = [CRDIContainer new];
-    });
+    NSParameterAssert(_defaultContainer);
     
     return _defaultContainer;
 }
@@ -39,7 +36,7 @@ static CRDIContainer *_defaultContainer = nil;
     return self;
 }
 
-- (void)setDefaultContainer:(CRDIContainer *)aContainer
++ (void)setDefaultContainer:(CRDIContainer *)aContainer
 {
     _defaultContainer = aContainer;
 }

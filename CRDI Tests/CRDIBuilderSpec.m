@@ -12,26 +12,15 @@
 #import "CRDIContainer.h"
 
 #import "CRDISampleClass.h"
-#import "CRDISampleProtocol.h"
 
 SPEC_BEGIN(CRDIClassBuilderSpec)
 
 describe(@"CRDIClassBuilderSpecs", ^{
-    __block CRDIContainer *container = nil;
-    
-    Protocol *sampleProtocol = @protocol(CRDISampleProtocol);
-    
-    beforeEach(^{
-        container = [CRDIContainer new];
-    });
-    
-    context(@"Class builder Context", ^{
+    context(@"Class builder", ^{
         __block CRDIClassBuilder *classBuilder = nil;
         
         beforeAll(^{
-            [container bindClass:[CRDISampleClass class] toProtocol:sampleProtocol];
-            
-            classBuilder = [container builderForProtocol:sampleProtocol];
+            classBuilder = [[CRDIClassBuilder alloc] initWithClass:[CRDISampleClass class]];
         });
         
         it(@"class builder should not be nil", ^{
@@ -50,29 +39,32 @@ describe(@"CRDIClassBuilderSpecs", ^{
         });
     });
     
-    context(@"Block builder context", ^{
+    context(@"Block builder", ^{
         __block CRDIBlockBuilder *blockBuilder = nil;
         
+        NSNumber *testingObject = @(100500);
+        
         beforeAll(^{
-            [container bindBlock:^id{
-                return [NSNull null];
-            } toProtocol:sampleProtocol];
-            
-            blockBuilder = [container builderForProtocol:sampleProtocol];
+            blockBuilder = [[CRDIBlockBuilder alloc] initWithBlock:^id{
+                return testingObject.copy;
+            }];
         });
         
         it(@"block builder should not be nil", ^{
             [[blockBuilder shouldNot] beNil];
-            
-            [[blockBuilder should] beKindOfClass:[CRDIBlockBuilder class]];
         });
         
         it(@"builded object should not be nil", ^{
-            [[[blockBuilder build] shouldNot] beNil];
+            id buildedObject = [blockBuilder build];
+            NSLog(@"%@", buildedObject);
+            
+            [[buildedObject shouldNot] beNil];
         });
         
-        it(@"block builder should return object if NSNULL class", ^{
-            [[[blockBuilder build] should] beKindOfClass:[NSNull class]];
+        it(@"returned int of builded object should equal to int of testingObject", ^{
+            NSInteger buildedInt = [[blockBuilder build] integerValue];
+            
+            [[theValue(buildedInt) should] equal:theValue(testingObject.integerValue)];
         });
     });
 });
