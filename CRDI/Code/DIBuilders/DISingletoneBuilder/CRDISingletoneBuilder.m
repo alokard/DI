@@ -8,20 +8,31 @@
 
 #import "CRDISingletoneBuilder.h"
 
+@interface CRDISingletoneBuilder ()
+
+@property (nonatomic, unsafe_unretained) Class classToBuild;
+@property (nonatomic, strong) id instance;
+
+@end
+
 @implementation CRDISingletoneBuilder
 
 - (id)initWithClass:(Class)aClass
 {
     self = [super init];
     
-    
+    self.classToBuild = aClass;
     
     return self;
 }
 
 - (id)build
 {
-    return nil;
+    if (self.instance == nil) {
+        self.instance = [self.classToBuild new];
+    }
+    
+    return self.instance;
 }
 
 @end

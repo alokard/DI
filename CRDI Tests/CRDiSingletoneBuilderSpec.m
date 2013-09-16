@@ -27,6 +27,7 @@ describe(@"CRDiSingletoneBuilderSpec", ^{
         [[instance should] beKindOfClass:cls];
     });
     
+    
 });
 
 SPEC_END
