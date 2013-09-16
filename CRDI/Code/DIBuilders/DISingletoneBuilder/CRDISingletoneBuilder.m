@@ -10,29 +10,41 @@
 
 @interface CRDISingletoneBuilder ()
 
-@property (nonatomic, unsafe_unretained) Class classToBuild;
-@property (nonatomic, strong) id instance;
+@property (nonatomic, strong) id sharedInstance;
+
+@property (nonatomic, weak) id <CRDIDependencyBuilder> instanceBuilder;
 
 @end
 
 @implementation CRDISingletoneBuilder
 
-- (id)initWithClass:(Class)aClass
+- (id)initWithBuilder:(id <CRDIDependencyBuilder>)aBuilder
 {
+    NSAssert(aBuilder, @"aBuilder == nil");
+    NSAssert([aBuilder conformsToProtocol:@protocol(CRDIDependencyBuilder)], @"aBuilder not implemet CRDIDependencyBuilder protocol");
+    
     self = [super init];
     
-    self.classToBuild = aClass;
+    assert(self);
+    
+    self.instanceBuilder = aBuilder;
     
     return self;
 }
 
 - (id)build
 {
-    if (self.instance == nil) {
-        self.instance = [self.classToBuild new];
-    }
+    dispatch_queue_t queue = dispatch_queue_create("CRDISingletoneBuilder queue", 0);
     
-    return self.instance;
+    __weak typeof(self) weakSelf = self;
+    
+    dispatch_sync(queue, ^{
+        if (!weakSelf.sharedInstance) {
+            weakSelf.sharedInstance = [weakSelf.instanceBuilder build];
+        }
+    });
+    
+    return self.sharedInstance;
 }
 
 @end

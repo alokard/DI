@@ -10,6 +10,6 @@
 
 @interface CRDISingletoneBuilder : NSObject <CRDIDependencyBuilder>
 
-- (id)initWithClass:(Class)aClass;
+- (id)initWithBuilder:(id <CRDIDependencyBuilder>)aBuilder;
 
 @end

@@ -1,32 +1,31 @@
 #import <Kiwi.h>
 #import "CRDISingletoneBuilder.h"
 #import "CRDISampleClass.h"
+#import "CRDIClassBuilder.h"
 
 SPEC_BEGIN(CRDiSingletoneBuilderSpec)
 
 describe(@"CRDiSingletoneBuilderSpec", ^{
     
-    Class cls = [CRDISampleClass class];
+    __block CRDIClassBuilder *classBuilder = nil;
     __block CRDISingletoneBuilder *singletoneBuilder = nil;
     
-    
-    beforeAll(^{
-        singletoneBuilder = [[CRDISingletoneBuilder alloc] initWithClass:cls];
+    beforeEach(^{
+        classBuilder = [[CRDIClassBuilder alloc] initWithClass:[CRDISampleClass class]];
+        singletoneBuilder = [[CRDISingletoneBuilder alloc] initWithBuilder:classBuilder];
     });
     
-    it(@"Should return always same instance", ^{
-        id instance = [singletoneBuilder build];
-        for (NSInteger i=0; i<10; i++) {
-            id otherInstance = [singletoneBuilder build];
-            [[instance should] equal:otherInstance];
-        }
-    });
     
     it(@"Should return instance with same class of instance builder", ^{
         id instance = [singletoneBuilder build];
-        [[instance should] beKindOfClass:cls];
+        [[instance should] beKindOfClass:[CRDISampleClass class]];
     });
     
+    it(@"Should raise due to init with nil object", ^{
+        [[theBlock(^{
+            [[CRDISingletoneBuilder alloc] initWithBuilder:nil];
+        }) should] raise];
+    });
     
 });
 
