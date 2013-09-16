@@ -1,5 +1,5 @@
 //
-//  CRDI.h
+//  CRDIInjector.h
 //  CRDI
 //
 //  Created by TheSooth on 9/16/13.
@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CRDIContainer.h"
 
-@interface CRDI : NSObject
+@interface CRDIInjector : NSObject
+
+- (id)initWithContainer:(CRDIContainer *)aContainer;
 
 @end
