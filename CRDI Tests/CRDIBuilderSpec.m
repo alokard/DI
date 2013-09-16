@@ -46,25 +46,24 @@ describe(@"CRDIClassBuilderSpecs", ^{
         
         beforeAll(^{
             blockBuilder = [[CRDIBlockBuilder alloc] initWithBlock:^id{
-                return testingObject.copy;
+                return testingObject;
             }];
         });
         
-        it(@"block builder should not be nil", ^{
+        it(@"should init not nil block builder", ^{
             [[blockBuilder shouldNot] beNil];
         });
         
-        it(@"builded object should not be nil", ^{
+        it(@"should build not nil object", ^{
             id buildedObject = [blockBuilder build];
-            NSLog(@"%@", buildedObject);
             
             [[buildedObject shouldNot] beNil];
         });
         
-        it(@"returned int of builded object should equal to int of testingObject", ^{
-            NSInteger buildedInt = [[blockBuilder build] integerValue];
+        it(@"should return builded object of block", ^{
+            id buildedObject = [blockBuilder build];
             
-            [[theValue(buildedInt) should] equal:theValue(testingObject.integerValue)];
+            [[buildedObject should] equal:testingObject];
         });
     });
 });
