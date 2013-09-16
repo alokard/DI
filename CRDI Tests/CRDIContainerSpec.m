@@ -14,32 +14,63 @@
 SPEC_BEGIN(CRDIContainerSpec)
 
 describe(@"CRDIContainerSpecs", ^{
-    
-    __block CRDIContainer *container = nil;
-    Protocol *sampleProtocol = @protocol(CRDISampleProtocol);
-    
-    beforeAll(^{
-        container = [CRDIContainer defaultContainer];
+    context(@"Default container specs", ^{
+        __block CRDIContainer *defaultContainer = nil;
+        
+        beforeEach(^{
+            defaultContainer = [CRDIContainer defaultContainer];
+        });
+        
+        it(@"defaultContainer should not be nil", ^{
+            defaultContainer = [CRDIContainer defaultContainer];
+            [[defaultContainer shouldNot] beNil];
+        });
+        
+        it(@"default container should be equal to def. contaienr var", ^{
+            CRDIContainer *container = [CRDIContainer defaultContainer];
+            
+            [[container should] equal:defaultContainer];
+        });
+        
+        it(@"defaultContainer should be nil", ^{
+            CRDIContainer *container = [CRDIContainer defaultContainer];
+            
+            [container setDefaultContainer:nil];
+            
+            CRDIContainer *nilledContainer = [CRDIContainer defaultContainer];
+            
+            [[nilledContainer should] beNil];
+        });
     });
     
-    it(@"Container should not be nil", ^{
-        [[container shouldNot] beNil];
-    });
-    
-    it (@"Should return class builder", ^{
+    context(@"Container specs", ^{
+        __block CRDIContainer *container = nil;
+        Protocol *sampleProtocol = @protocol(CRDISampleProtocol);
         
-        [container bindClass:[CRDISampleClass class] toProtocol:sampleProtocol];
+        beforeEach(^{
+            container = [CRDIContainer new];
+        });
         
-        NSObject *builder = [container builderForProtocol:sampleProtocol];
-        
-        [[theValue([builder conformsToProtocol:@protocol(CRDIDependencyBuilder)]) should] beTrue];
-    });
-    
-    it(@"Should raise exception due to already added protocol", ^{
-        [[theBlock(^{
+        it (@"Should return class builder", ^{
+            
             [container bindClass:[CRDISampleClass class] toProtocol:sampleProtocol];
-        }) should] raise];
+            
+            NSObject *builder = [container builderForProtocol:sampleProtocol];
+            
+            [[builder shouldNot] beNil];
+            
+            [[theValue([builder conformsToProtocol:@protocol(CRDIDependencyBuilder)]) should] beTrue];
+        });
+        
+        it(@"Should raise exception due to already added protocol", ^{
+            [container bindClass:[CRDISampleClass class] toProtocol:sampleProtocol];
+             
+             [[theBlock(^{
+                [container bindClass:[CRDISampleClass class] toProtocol:sampleProtocol];
+            }) should] raise];
+        });
     });
+
 });
 
 SPEC_END

@@ -8,6 +8,8 @@
 
 #import "CRDIContainer.h"
 
+static CRDIContainer *_defaultContainer = nil;
+
 @interface CRDIContainer ()
 
 @property (nonatomic, strong) CRDIMutableConfigurationStorage *configurationDictionary;
@@ -16,8 +18,8 @@
 
 @implementation CRDIContainer
 
-+ (CRDIContainer *)defaultContainer {
-    static CRDIContainer *_defaultContainer = nil;
++ (CRDIContainer *)defaultContainer
+{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _defaultContainer = [CRDIContainer new];
@@ -35,6 +37,11 @@
     self.configurationDictionary = [CRDIMutableConfigurationStorage new];
     
     return self;
+}
+
+- (void)setDefaultContainer:(CRDIContainer *)aContainer
+{
+    _defaultContainer = aContainer;
 }
 
 @end

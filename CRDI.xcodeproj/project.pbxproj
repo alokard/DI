@@ -24,6 +24,8 @@
 		EA5B9E5617E739AA002A0D81 /* CRDIInjectedClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E5217E739AA002A0D81 /* CRDIInjectedClass.m */; };
 		EA5B9E5717E739AA002A0D81 /* CRDISampleClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E5417E739AA002A0D81 /* CRDISampleClass.m */; };
 		EA5B9E5D17E73C94002A0D81 /* CRDIBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E5C17E73C94002A0D81 /* CRDIBuilderSpec.m */; };
+		EA5B9E5E17E7493C002A0D81 /* CRDIBlockBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E2217E735B2002A0D81 /* CRDIBlockBuilder.m */; };
+		EA5B9E5F17E7493E002A0D81 /* CRDIClassBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E2517E735B2002A0D81 /* CRDIClassBuilder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -401,7 +403,9 @@
 			files = (
 				EA5B9E5717E739AA002A0D81 /* CRDISampleClass.m in Sources */,
 				EA5B9E5617E739AA002A0D81 /* CRDIInjectedClass.m in Sources */,
+				EA5B9E5E17E7493C002A0D81 /* CRDIBlockBuilder.m in Sources */,
 				EA5B9E5D17E73C94002A0D81 /* CRDIBuilderSpec.m in Sources */,
+				EA5B9E5F17E7493E002A0D81 /* CRDIClassBuilder.m in Sources */,
 				EA5B9E4717E735C1002A0D81 /* CRDIContainerSpec.m in Sources */,
 				EA5B9E4E17E73699002A0D81 /* CRDIContainer.m in Sources */,
 				EA5B9E4F17E7369E002A0D81 /* CRDIConfigratuion.m in Sources */,

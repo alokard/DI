@@ -10,7 +10,7 @@
 
 @interface CRDIClassBuilder ()
 
-@property (nonatomic, copy) Class classForBuild;
+@property (nonatomic, unsafe_unretained) Class classForBuild;
 
 @end
 

@@ -8,6 +8,7 @@
 
 #import <Kiwi.h>
 #import "CRDIClassBuilder.h"
+#import "CRDIBlockBuilder.h"
 #import "CRDIContainer.h"
 
 #import "CRDISampleClass.h"
@@ -19,20 +20,17 @@ describe(@"CRDIClassBuilderSpecs", ^{
     __block CRDIContainer *container = nil;
     
     Protocol *sampleProtocol = @protocol(CRDISampleProtocol);
-    Protocol *anotherSampleProtocol = @protocol(CRDIAnotherSampleProtocol);
     
-    beforeAll(^{
-        container = [CRDIContainer defaultContainer];
-        [container bindClass:[CRDISampleClass class] toProtocol:sampleProtocol];
-        [container bindBlock:^id{
-            return [NSNull null];
-        } toProtocol:anotherSampleProtocol];
+    beforeEach(^{
+        container = [CRDIContainer new];
     });
     
     context(@"Class builder Context", ^{
         __block CRDIClassBuilder *classBuilder = nil;
         
         beforeAll(^{
+            [container bindClass:[CRDISampleClass class] toProtocol:sampleProtocol];
+            
             classBuilder = [container builderForProtocol:sampleProtocol];
         });
         
@@ -48,13 +46,33 @@ describe(@"CRDIClassBuilderSpecs", ^{
         it(@"buider should build object of class CRSampleClass", ^{
             CRDISampleClass *sampleClass = [classBuilder build];
             
-            [[sampleClass should] isKindOfClass:[CRDISampleClass class]];
+            [[sampleClass should] beKindOfClass:[CRDISampleClass class]];
+        });
+    });
+    
+    context(@"Block builder context", ^{
+        __block CRDIBlockBuilder *blockBuilder = nil;
+        
+        beforeAll(^{
+            [container bindBlock:^id{
+                return [NSNull null];
+            } toProtocol:sampleProtocol];
+            
+            blockBuilder = [container builderForProtocol:sampleProtocol];
         });
         
-        it(@"builded class should conforms to CRDISampleProtocol", ^{
-            CRDISampleClass *sampleClass = [classBuilder build];
+        it(@"block builder should not be nil", ^{
+            [[blockBuilder shouldNot] beNil];
             
-            [[theValue([sampleClass conformsToProtocol:sampleProtocol]) should] beTrue];
+            [[blockBuilder should] beKindOfClass:[CRDIBlockBuilder class]];
+        });
+        
+        it(@"builded object should not be nil", ^{
+            [[[blockBuilder build] shouldNot] beNil];
+        });
+        
+        it(@"block builder should return object if NSNULL class", ^{
+            [[[blockBuilder build] should] beKindOfClass:[NSNull class]];
         });
     });
 });

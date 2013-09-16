@@ -19,10 +19,10 @@
 
 - (void)bindClass:(Class)aClass toProtocol:(Protocol *)aProtocol;
 
-- (void)bindClass:(Class)aClass toClass:(Class)aClass;
-
 - (void)bindBlock:(CRDIContainerBindBlock)aBlock toProtocol:(Protocol *)aProtocol;
 
 - (id <CRDIDependencyBuilder>)builderForProtocol:(Protocol *)aProtocol;
+
+- (void)setDefaultContainer:(CRDIContainer *)aContainer;
 
 @end
