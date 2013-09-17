@@ -18,11 +18,11 @@
 
 + (void)setDefaultContainer:(CRDIContainer *)aContainer;
 
-- (void)startWithRootModule:(CRDIConfiguration *)aModule;
-
 - (void)bindClass:(Class)aClass toProtocol:(Protocol *)aProtocol;
 
 - (void)bindBlock:(CRDIContainerBindBlock)aBlock toProtocol:(Protocol *)aProtocol;
+
+
 
 - (id <CRDIDependencyBuilder>)builderForProtocol:(Protocol *)aProtocol;
 
