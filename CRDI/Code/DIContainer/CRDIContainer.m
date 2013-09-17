@@ -12,7 +12,7 @@ static CRDIContainer *_defaultContainer = nil;
 
 @interface CRDIContainer ()
 
-@property (nonatomic, strong) CRDIMutableConfigurationStorage *configurationDictionary;
+@property (nonatomic, strong) NSMutableDictionary *configurationDictionary;
 
 @end
 
@@ -31,7 +31,7 @@ static CRDIContainer *_defaultContainer = nil;
     
     assert(self);
     
-    self.configurationDictionary = [CRDIMutableConfigurationStorage new];
+    self.configurationDictionary = [NSMutableDictionary new];
     
     return self;
 }

@@ -7,4 +7,3 @@
 //
 
 typedef id(^CRDIContainerBindBlock)(void);
-typedef NSMutableDictionary CRDIMutableConfigurationStorage;
