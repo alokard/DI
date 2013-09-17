@@ -7,6 +7,7 @@
 //
 
 #import "CRDISingletoneBuilder.h"
+#import "CRDIException.h"
 
 @interface CRDISingletoneBuilder ()
 
@@ -23,7 +24,10 @@
 - (id)initWithBuilder:(id <CRDIDependencyBuilder>)aBuilder
 {
     NSParameterAssert(aBuilder);
-    NSAssert([aBuilder conformsToProtocol:@protocol(CRDIDependencyBuilder)], @"aBuilder not implemet CRDIDependencyBuilder protocol");
+    
+    if (![aBuilder conformsToProtocol:@protocol(CRDIDependencyBuilder)]) {
+        @throw [CRDIException exceptionWithReason:@"aBuilder not implemet CRDIDependencyBuilder protocol"];
+    }
     
     self = [super init];
     

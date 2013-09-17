@@ -8,7 +8,7 @@
 
 #import "CRDIContainer.h"
 
-static CRDIContainer *_defaultContainer = nil;
+static CRDIContainer *defaultContainer = nil;
 
 @interface CRDIContainer ()
 
@@ -20,25 +20,24 @@ static CRDIContainer *_defaultContainer = nil;
 
 + (CRDIContainer *)defaultContainer
 {
-    NSParameterAssert(_defaultContainer);
     
-    return _defaultContainer;
+    return defaultContainer;
 }
 
 - (id)init
 {
     self = [super init];
     
-    assert(self);
-    
-    self.configurationDictionary = [NSMutableDictionary new];
+    if (self) {
+        self.configurationDictionary = [NSMutableDictionary new];
+    }
     
     return self;
 }
 
 + (void)setDefaultContainer:(CRDIContainer *)aContainer
 {
-    _defaultContainer = aContainer;
+    defaultContainer = aContainer;
 }
 
 @end

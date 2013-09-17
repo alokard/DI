@@ -20,6 +20,12 @@
 
 - (id)initWithContainer:(CRDIContainer *)aContainer
 {
+    NSParameterAssert(aContainer);
+    
+    if ([aContainer isKindOfClass:[CRDIContainer class]]) {
+        @throw [CRDIException exceptionWithReason:@"aContainer is not a kind of CRDIContainer class"];
+    }
+    
     self = [super init];
     
     if (self) {
@@ -31,14 +37,12 @@
 
 - (id)initWithParentConfiguratuion:(CRDIConfiguration *)aConfiguration container:(CRDIContainer *)aContainer
 {
-    self = [super init];
+    self = [self initWithContainer:aContainer];
     
     if (self) {
         self.parentConfiguration = aConfiguration;
         
         [self checkForDependencyLoop];
-        
-        self.container = aContainer;
     }
     
     return self;
@@ -50,7 +54,9 @@
 {
     BOOL configurationIsSublcassOfConfigurationClass = [aConfigurationClass isSubclassOfClass:[CRDIConfiguration class]];
     
-    NSParameterAssert(configurationIsSublcassOfConfigurationClass);
+    if (!configurationIsSublcassOfConfigurationClass) {
+        @throw [CRDIException exceptionWithReason:@"configurationClass is not subclass of CRDIConfiguration class"];
+    }
     
     CRDIConfiguration *configuration = [[aConfigurationClass alloc] initWithParentConfiguratuion:self container:self.container];
     
@@ -63,7 +69,7 @@
     
     while (configuration) {
         if ([configuration isKindOfClass:[self class]]) {
-            NSAssert(false, @"Parent module isKind of received module");
+            @throw [CRDIException exceptionWithReason:@"Parent module isKind of received module"];
         }
         configuration = configuration.parentConfiguration;
     }

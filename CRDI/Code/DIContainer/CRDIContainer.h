@@ -8,6 +8,7 @@
 
 #import "CRDITypedefs.h"
 #import "CRDIDependencyBuilder.h"
+#import "CRDIException.h"
 
 @class CRDIConfiguration;
 

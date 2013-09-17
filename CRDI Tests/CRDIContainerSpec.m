@@ -32,13 +32,6 @@ describe(@"CRDIContainerSpecs", ^{
             [[container should] equal:defaultContainer];
         });
         
-        it(@"defaultContainer should raise due to nil", ^{
-            [CRDIContainer setDefaultContainer:nil];
-            
-            [[theBlock(^{
-                [CRDIContainer defaultContainer];
-            }) should] raise];
-        });
     });
     
     context(@"Container specs", ^{

@@ -27,6 +27,12 @@ describe(@"CRDiSingletoneBuilderSpec", ^{
         }) should] raise];
     });
     
+    it(@"Should raise do to init with object what not implement CRDIDependencyBuilder protocol", ^{
+        [[theBlock(^{
+            [[CRDISingletoneBuilder alloc] initWithBuilder:@""];
+        }) should] raise];
+    });
+    
 });
 
 SPEC_END

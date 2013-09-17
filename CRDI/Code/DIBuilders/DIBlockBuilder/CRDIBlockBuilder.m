@@ -18,11 +18,11 @@
 
 - (id)initWithBlock:(CRDIContainerBindBlock)aBindBlock
 {
+    NSParameterAssert(aBindBlock);
+    
     self = [super init];
     
     if (self) {
-        NSParameterAssert(aBindBlock);
-    
         self.bindBlock = aBindBlock;
     }
     

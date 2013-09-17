@@ -18,6 +18,8 @@
 
 - (id)initWithClass:(Class)aClass
 {
+    NSParameterAssert(aClass);
+    
     self = [super init];
     
     if (self) {
