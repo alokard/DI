@@ -22,7 +22,7 @@
 {
     NSParameterAssert(aContainer);
     
-    if ([aContainer isKindOfClass:[CRDIContainer class]]) {
+    if (![aContainer isKindOfClass:[CRDIContainer class]]) {
         @throw [CRDIException exceptionWithReason:@"aContainer is not a kind of CRDIContainer class"];
     }
     
@@ -37,6 +37,8 @@
 
 - (id)initWithParentConfiguratuion:(CRDIConfiguration *)aConfiguration container:(CRDIContainer *)aContainer
 {
+    NSParameterAssert(aConfiguration);
+    
     self = [self initWithContainer:aContainer];
     
     if (self) {
