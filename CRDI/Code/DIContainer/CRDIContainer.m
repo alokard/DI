@@ -24,6 +24,11 @@ static CRDIContainer *defaultContainer = nil;
     return defaultContainer;
 }
 
++ (void)setDefaultContainer:(CRDIContainer *)aContainer
+{
+    defaultContainer = aContainer;
+}
+
 - (id)init
 {
     self = [super init];
@@ -33,11 +38,6 @@ static CRDIContainer *defaultContainer = nil;
     }
     
     return self;
-}
-
-+ (void)setDefaultContainer:(CRDIContainer *)aContainer
-{
-    defaultContainer = aContainer;
 }
 
 @end
