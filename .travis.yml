@@ -1,6 +1,5 @@
 language: objective-c
-before_install:
-    - gem install ios_ci
-    - brew install ios-sim
 
-script: ios_ci cedar --source-root $TRAVIS_BUILD_DIR/Example --workspace CRDI.xcworkspace --scheme CRDISpecs --build-path Build/Products
+before_install: ./install_dep.sh
+
+script:  xctool -workspace CRDI.xcworkspace -scheme CRDI build test -sdk iphonesimulator
