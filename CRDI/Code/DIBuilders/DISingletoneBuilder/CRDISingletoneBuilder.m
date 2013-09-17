@@ -14,31 +14,32 @@
 
 @property (nonatomic, weak) id <CRDIDependencyBuilder> instanceBuilder;
 
+@property (nonatomic, strong) dispatch_queue_t queue;
+
 @end
 
 @implementation CRDISingletoneBuilder
 
 - (id)initWithBuilder:(id <CRDIDependencyBuilder>)aBuilder
 {
-    NSAssert(aBuilder, @"aBuilder == nil");
+    NSParameterAssert(aBuilder);
     NSAssert([aBuilder conformsToProtocol:@protocol(CRDIDependencyBuilder)], @"aBuilder not implemet CRDIDependencyBuilder protocol");
     
     self = [super init];
     
-    assert(self);
-    
-    self.instanceBuilder = aBuilder;
+    if (self) {
+        self.queue = dispatch_queue_create("CRDISingletoneBuilder", 0);
+        self.instanceBuilder = aBuilder;
+    }
     
     return self;
 }
 
 - (id)build
 {
-    dispatch_queue_t queue = dispatch_queue_create("CRDISingletoneBuilder queue", 0);
-    
     __weak typeof(self) weakSelf = self;
     
-    dispatch_sync(queue, ^{
+    dispatch_sync(self.queue, ^{
         if (!weakSelf.sharedInstance) {
             weakSelf.sharedInstance = [weakSelf.instanceBuilder build];
         }

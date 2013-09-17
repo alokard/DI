@@ -20,9 +20,9 @@
 {
     self = [super init];
     
-    assert(self);
-    
-    self.classForBuild = aClass;
+    if (self) {
+        self.classForBuild = aClass;   
+    }
     
     return self;
 }

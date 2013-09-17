@@ -20,9 +20,11 @@
 {
     self = [super init];
     
-    assert(self);
+    if (self) {
+        NSParameterAssert(aBindBlock);
     
-    self.bindBlock = aBindBlock;
+        self.bindBlock = aBindBlock;
+    }
     
     return self;
 }
