@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EA5B9E3917E735C1002A0D81"
-               BuildableName = "CRDI Tests.octest"
-               BlueprintName = "CRDI Tests"
+               BuildableName = "CRDISpecs.octest"
+               BlueprintName = "CRDISpecs"
                ReferencedContainer = "container:CRDI.xcodeproj">
             </BuildableReference>
          </TestableReference>
