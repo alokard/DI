@@ -1,4 +1,5 @@
 DI
+[![Build Status](https://travis-ci.org/CriolloKit/DI.png?branch=master)](https://travis-ci.org/CriolloKit/DI)
 ==
 
 Inspired by 
