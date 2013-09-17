@@ -12,6 +12,8 @@
 
 @property (nonatomic, weak) CRDIContainer *container;
 
+@property (nonatomic, weak) CRDIConfiguration *parentConfiguration;
+
 @end
 
 @implementation CRDIConfiguration
@@ -20,27 +22,50 @@
 {
     self = [super init];
     
-    assert(self);
+    if (self) {
+        self.container = aContainer;
+    }
+    
+    return self;
+}
+
+- (id)initWithParentConfiguratuion:(CRDIConfiguration *)aConfiguration container:(CRDIContainer *)aContainer
+{
+    self = [super init];
+    
+    if (self) {
+        self.parentConfiguration = aConfiguration;
+        
+        [self checkForDependencyLoop];
+        
+        self.container = aContainer;
+    }
     
     return self;
 }
 
 - (void)configure {}
 
-- (void)include:(CRDIConfiguration *)aModule
+- (void)includeConfigurationWithClass:(Class)aConfigurationClass
 {
-    [self checkForDependencyLoop];
+    BOOL configurationIsSublcassOfConfigurationClass = [aConfigurationClass isSubclassOfClass:[CRDIConfiguration class]];
+    
+    NSParameterAssert(configurationIsSublcassOfConfigurationClass);
+    
+    CRDIConfiguration *configuration = [[aConfigurationClass alloc] initWithParentConfiguratuion:self container:self.container];
+    
+    [configuration configure];
 }
 
 - (void)checkForDependencyLoop
 {
-    CRDIConfiguration *configuration = self.parentModule;
+    CRDIConfiguration *configuration = self.parentConfiguration;
     
     while (configuration) {
         if ([configuration isKindOfClass:[self class]]) {
             NSAssert(false, @"Parent module isKind of received module");
         }
-        configuration = configuration.parentModule;
+        configuration = configuration.parentConfiguration;
     }
 }
 

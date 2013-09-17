@@ -221,8 +221,8 @@
 		EA5B9E2617E735B2002A0D81 /* DIConfiguration */ = {
 			isa = PBXGroup;
 			children = (
-				EA5B9E2717E735B2002A0D81 /* CRDIConfigratuion.m */,
 				EA5B9E2817E735B2002A0D81 /* CRDIConfiguration.h */,
+				EA5B9E2717E735B2002A0D81 /* CRDIConfigratuion.m */,
 			);
 			path = DIConfiguration;
 			sourceTree = "<group>";

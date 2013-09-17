@@ -12,10 +12,13 @@
 
 @interface CRDIConfiguration : NSObject
 
-@property (nonatomic, weak, readonly) CRDIConfiguration *parentModule;
+@property (nonatomic, weak, readonly) CRDIConfiguration *parentConfiguration;
 
 - (id)initWithContainer:(CRDIContainer *)aContainer;
+- (id)initWithParentConfiguratuion:(CRDIConfiguration *)aConfiguration container:(CRDIContainer *)aContainer;
 
 - (void)configure;
+
+- (void)includeConfigurationWithClass:(Class)aConfigurationClass;
 
 @end
