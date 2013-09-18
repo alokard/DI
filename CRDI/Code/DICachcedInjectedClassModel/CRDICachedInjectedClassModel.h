@@ -10,7 +10,7 @@
 
 @interface CRDICachedInjectedClassModel : NSObject
 
-- (void)addProtocol:(Protocol *)aProtocol forPropertyNamed:(NSString *)aPropertyName;
+- (void)addProtocolNamed:(NSString *)aProtocolName forPropertyName:(NSString *)aPropertyName;
 
 - (NSArray *)propertiesList;
 

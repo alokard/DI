@@ -7,6 +7,7 @@
 //
 
 #import "CRDICachedInjectedClassModel.h"
+#import "CRDIException.h"
 
 @interface CRDICachedInjectedClassModel ()
 
@@ -26,14 +27,16 @@
 }
 
 
-- (void)addProtocol:(Protocol *)aProtocol forPropertyNamed:(NSString *)aPropertyName
+- (void)addProtocolNamed:(NSString *)aProtocolName forPropertyName:(NSString *)aPropertyName
 {
-    NSParameterAssert(aProtocol);
+    NSParameterAssert(aProtocolName);
     NSParameterAssert(aPropertyName);
     
-    NSString *protocolName = NSStringFromProtocol(aProtocol);
+    if (!NSProtocolFromString(aPropertyName)) {
+        @throw [CRDIException exceptionWithReason:@"Unknown protocol"];
+    }
 
-    [self.propertyDictionary setObject:protocolName forKey:aPropertyName];
+    [self.propertyDictionary setObject:aProtocolName forKey:aPropertyName];
 }
 
 - (NSArray *)propertiesList

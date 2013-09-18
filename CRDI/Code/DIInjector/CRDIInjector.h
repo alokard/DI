@@ -12,6 +12,10 @@
 
 @interface CRDIInjector : NSObject <CRDIInstanceInjector>
 
++ (CRDIInjector *)defaultInjector;
+
++ (void)setDefaultInjector:(CRDIInjector *)aDefaultInjector;
+
 - (id)initWithContainer:(CRDIContainer *)aContainer;
 
 @end
