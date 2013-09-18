@@ -25,10 +25,8 @@
 		EA06443417E85F9C00CF1132 /* CRDIException.m in Sources */ = {isa = PBXBuildFile; fileRef = EA06443317E85F9C00CF1132 /* CRDIException.m */; };
 		EA06443517E8610900CF1132 /* CRDIException.m in Sources */ = {isa = PBXBuildFile; fileRef = EA06443317E85F9C00CF1132 /* CRDIException.m */; };
 		EA16E22F17E7358100F90D98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA16E22E17E7358100F90D98 /* Foundation.framework */; };
-		EA435CB717E9AC0A007F3878 /* CRDICachedInjectedClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA435CB617E9AC0A007F3878 /* CRDICachedInjectedClassModel.m */; };
 		EA435CBD17E9B37C007F3878 /* CRDIInjectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA435CBC17E9B37C007F3878 /* CRDIInjectorSpec.m */; };
 		EA435CBE17E9B7BD007F3878 /* CRDIInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E2E17E735B2002A0D81 /* CRDIInjector.m */; };
-		EA435CBF17E9BE02007F3878 /* CRDICachedInjectedClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA435CB617E9AC0A007F3878 /* CRDICachedInjectedClassModel.m */; };
 		EA58219017E865A10043406A /* CRDIConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA58218F17E865A10043406A /* CRDIConfigurationSpec.m */; };
 		EA5B9E3117E735B2002A0D81 /* CRDIBlockBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E2217E735B2002A0D81 /* CRDIBlockBuilder.m */; };
 		EA5B9E3217E735B2002A0D81 /* CRDIClassBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E2517E735B2002A0D81 /* CRDIClassBuilder.m */; };
@@ -94,8 +92,6 @@
 		EA16E22E17E7358100F90D98 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA16E23217E7358100F90D98 /* CRDI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRDI-Prefix.pch"; sourceTree = "<group>"; };
 		EA435CA717E98BDC007F3878 /* CRDIInstanceInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDIInstanceInjector.h; sourceTree = "<group>"; };
-		EA435CB517E9AC0A007F3878 /* CRDICachedInjectedClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDICachedInjectedClassModel.h; sourceTree = "<group>"; };
-		EA435CB617E9AC0A007F3878 /* CRDICachedInjectedClassModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDICachedInjectedClassModel.m; sourceTree = "<group>"; };
 		EA435CBC17E9B37C007F3878 /* CRDIInjectorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIInjectorSpec.m; sourceTree = "<group>"; };
 		EA58218F17E865A10043406A /* CRDIConfigurationSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIConfigurationSpec.m; sourceTree = "<group>"; };
 		EA5B9E1E17E735B2002A0D81 /* CRDITypedefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDITypedefs.h; sourceTree = "<group>"; };
@@ -255,20 +251,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EA435CB417E9ABFB007F3878 /* DICachcedInjectedClassModel */ = {
-			isa = PBXGroup;
-			children = (
-				EA435CB517E9AC0A007F3878 /* CRDICachedInjectedClassModel.h */,
-				EA435CB617E9AC0A007F3878 /* CRDICachedInjectedClassModel.m */,
-			);
-			path = DICachcedInjectedClassModel;
-			sourceTree = "<group>";
-		};
 		EA5B9E1C17E735B2002A0D81 /* Code */ = {
 			isa = PBXGroup;
 			children = (
 				AD7A72CC17E9C18400602401 /* DIClassInspection */,
-				EA435CB417E9ABFB007F3878 /* DICachcedInjectedClassModel */,
 				EA06442E17E85F2000CF1132 /* DIException */,
 				EA5B9E1D17E735B2002A0D81 /* Defines */,
 				EA5B9E1F17E735B2002A0D81 /* DIBuilders */,
@@ -553,7 +539,6 @@
 				68ACD69D17E75956003BA236 /* CRDISingletoneBuilder.m in Sources */,
 				AD7A72E217E9C7EA00602401 /* CRDIDefaultPropertyNameMatcher.m in Sources */,
 				AD7A72D717E9C24200602401 /* CRDIClassInspector.m in Sources */,
-				EA435CB717E9AC0A007F3878 /* CRDICachedInjectedClassModel.m in Sources */,
 				EA06443417E85F9C00CF1132 /* CRDIException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,7 +547,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA435CBF17E9BE02007F3878 /* CRDICachedInjectedClassModel.m in Sources */,
 				EA5B9E5717E739AA002A0D81 /* CRDISampleClass.m in Sources */,
 				EA5B9E5617E739AA002A0D81 /* CRDIInjectedClass.m in Sources */,
 				EA5B9E5E17E7493C002A0D81 /* CRDIBlockBuilder.m in Sources */,
