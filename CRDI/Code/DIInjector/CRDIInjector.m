@@ -15,8 +15,8 @@ static CRDIInjector *defaultInjector = nil;
 @interface CRDIInjector ()
 
 @property (nonatomic, weak) CRDIContainer *container;
-
 @property (nonatomic, strong) NSMutableDictionary *classesCache;
+
 
 @end
 
@@ -29,13 +29,12 @@ static CRDIInjector *defaultInjector = nil;
 
 + (void)setDefaultInjector:(CRDIInjector *)aDefaultInjector
 {
-    NSParameterAssert(aDefaultInjector);
-    
     defaultInjector = aDefaultInjector;
 }
 
 - (id)initWithContainer:(CRDIContainer *)aContainer
 {
+    NSParameterAssert(aContainer);
     self = [super init];
     
     if (self) {
@@ -48,18 +47,6 @@ static CRDIInjector *defaultInjector = nil;
 - (void)injectImplementationsToInstance:(id<NSObject>)aInstance
 {
     NSParameterAssert(aInstance);
-    
-    unsigned int ivarsCount = 0;
-    
-    Ivar *iVariables = class_copyIvarList([aInstance class], &ivarsCount);
-    
-    CRDICachedInjectedClassModel *cachedModelClass = [CRDICachedInjectedClassModel new];
-    
-    for (int i = 0; i < ivarsCount; i++) {
-        Ivar ivar = iVariables[i];
-        
-        NSString *iVarName = [self iVarNameFromIvar:ivar];
-    }
 }
 
 - (void)injectObjecPropertiesToInstance:(id)aInstance
@@ -77,18 +64,6 @@ static CRDIInjector *defaultInjector = nil;
         
         [aInstance setValue:buildedObject forKey:propertyName];
     }
-}
-
-- (NSString *)iVarNameFromIvar:(Ivar)aIvar
-{
-    return [NSString stringWithUTF8String:ivar_getName(aIvar)];
-}
-
--(BOOL)iVarIsProtocol:(NSString *)aIvarType
-{
-    NSParameterAssert(aIvarType);
-    
-    return [aIvarType hasPrefix:@"<"] && [aIvarType hasSuffix:@">"];
 }
 
 @end

@@ -11,6 +11,6 @@
 
 @interface CRDIInjectedClass : NSObject
 
-@property (nonatomic, weak) id <CRDISampleProtocol> ioc_injected;
+@property (nonatomic, weak) NSObject <CRDISampleProtocol> *ioc_injected;
 
 @end
