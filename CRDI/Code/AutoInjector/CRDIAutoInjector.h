@@ -9,11 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "NSObject+AutoInject.h"
 
-@class CRDIInjector;
 
 @interface CRDIAutoInjector : NSObject
 
-- (id)initWithInjector:(CRDIInjector*)anInjector;
+- (id)initWithInjector:(id <CRDIInstanceInjector>)anInjector;
 
 - (void)attachToClass:(Class)classToAttach;
 
