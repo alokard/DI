@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CRDIInjector.h"
+
+@class CRDIInjector;
 
 @interface NSObject (AutoInject)
 
