@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "CRDIContainer.h"
+#import "CRDIInstanceInjector.h"
 
-@interface CRDIInjector : NSObject
+@interface CRDIInjector : NSObject <CRDIInstanceInjector>
+
++ (CRDIInjector *)defaultInjector;
+
++ (void)setDefaultInjector:(CRDIInjector *)aDefaultInjector;
 
 - (id)initWithContainer:(CRDIContainer *)aContainer;
 
