@@ -10,4 +10,6 @@
 
 @interface CRDIInjectedClassChild : CRDIInjectedClass
 
+@property (nonatomic, strong) NSObject <CRDISampleProtocol> *ioc_child;
+
 @end

@@ -55,7 +55,7 @@ describe(@"Attach to class", ^{
     it(@"Should attach and auto inject dependencies", ^{
         [_autoInjector attachToClass:[CRDIInjectedClass class]];
         
-        CRDIInjectedClass *objc = [CRDIInjectedClass new];
+        CRDIInjectedClass *objc = [[CRDIInjectedClass alloc] init];
         
         [[objc.ioc_injected shouldNot] beNil];
         [[objc.ioc_injected should] equal:_sampleObject1];
@@ -63,6 +63,31 @@ describe(@"Attach to class", ^{
         [[objc.ioc_testField shouldNot] beNil];
         [[objc.ioc_testField should] equal:_sampleObject2];
         
+        [[objc.stringTest should] beNil];
+    });
+    
+    it(@"Should attach and auto inject dependencies into child classes", ^{
+        [_autoInjector attachToClass:[CRDIInjectedClass class]];
+        
+        CRDIInjectedClassChild *objc = [[CRDIInjectedClassChild alloc] init];
+        
+        [[objc.ioc_injected shouldNot] beNil];
+        [[objc.ioc_injected should] equal:_sampleObject1];
+        
+        [[objc.ioc_testField shouldNot] beNil];
+        [[objc.ioc_testField should] equal:_sampleObject2];
+        
+        [[objc.stringTest should] beNil];
+        
+        [[objc.ioc_child shouldNot] beNil];
+        [[objc.ioc_child should] equal:_sampleObject1];
+        
+    });
+    
+    it(@"should not allow to attach to NSObject", ^{
+        [[theBlock(^{
+            [_autoInjector attachToClass:[NSObject class]];
+        }) should] raise];
     });
 });
 

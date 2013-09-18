@@ -1,4 +1,5 @@
 PODS:
+  - ISMethodSwizzling (0.0.2)
   - Kiwi (2.2.1):
     - Kiwi/ARC
     - Kiwi/NonARC
@@ -7,10 +8,12 @@ PODS:
   - MAObjCRuntime (0.0.1)
 
 DEPENDENCIES:
+  - ISMethodSwizzling
   - Kiwi
   - MAObjCRuntime
 
 SPEC CHECKSUMS:
+  ISMethodSwizzling: 806aafc79dbdafbc482eae3f86b0c632ed8b1f08
   Kiwi: e6524ba0eaa1b28af7af146bdee5314b32aa3edb
   MAObjCRuntime: 284004079156d10cb8237bc3ffcfa3a0e1a0af22
 

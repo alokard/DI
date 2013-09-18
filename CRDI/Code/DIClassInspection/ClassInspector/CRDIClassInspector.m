@@ -9,7 +9,6 @@
 #import "CRDIClassInspector.h"
 #import <MAObjCRuntime/MARTNSObject.h>
 #import <MAObjCRuntime/RTProperty.h>
-
 #import "CRDIDefaultPropertyNameMatcher.h"
 
 @interface CRDIClassInspector ()
@@ -52,11 +51,16 @@
     
     NSArray *properties = [instanceClass rt_properties];
     
-    for (RTProperty *p in properties) {
-        if ([self.propertyNameMatcher shouldInject:p.name]) {
-            DIPropertyModel *m = [self modelForProperty:p];
-            [array addObject:m];
+    while (instanceClass) {
+        for (RTProperty *p in properties) {
+            if ([self.propertyNameMatcher shouldInject:p.name]) {
+                DIPropertyModel *m = [self modelForProperty:p];
+                [array addObject:m];
+            }
         }
+        
+        instanceClass = [instanceClass superclass];
+        properties = [instanceClass rt_properties];
     }
     
     return array;

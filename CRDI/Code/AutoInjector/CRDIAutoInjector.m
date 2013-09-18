@@ -8,6 +8,7 @@
 
 #import "CRDIAutoInjector.h"
 
+
 @interface CRDIAutoInjector ()
 
 @property (nonatomic, strong) CRDIInjector *injector;
@@ -28,7 +29,8 @@
 
 - (void)attachToClass:(Class)classToAttach
 {
-    
+    NSParameterAssert(classToAttach != [NSObject class]);
+    [classToAttach setInjector:self.injector];
 }
 
 @end
