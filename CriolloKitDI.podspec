@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "CriolloKitDI"
   s.version      = "0.0.1"
-  s.summary      = "Dependency Injection framework for Criollo Kit"
+  s.summary      = "DI framework for Criollo Kit"
 
   s.description  = <<-DESC
                 Dependency Injection Framework
