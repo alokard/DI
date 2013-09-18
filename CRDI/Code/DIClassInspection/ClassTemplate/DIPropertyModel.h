@@ -11,6 +11,6 @@
 @interface DIPropertyModel : NSObject
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) Protocol *procol;
+@property (nonatomic, strong) Protocol *protocol;
 
 @end

@@ -7,16 +7,16 @@
 //
 
 #import "CRDIInjector.h"
-#import "CRDICachedInjectedClassModel.h"
-#import <objc/runtime.h>
+#import "DIClassTemplate.h"
+#import "CRDIClassInspector.h"
 
-static CRDIInjector *defaultInjector = nil;
+static CRDIInjector *sDefaultInjector = nil;
 
 @interface CRDIInjector ()
 
 @property (nonatomic, weak) CRDIContainer *container;
 @property (nonatomic, strong) NSMutableDictionary *classesCache;
-
+@property (nonatomic, strong) CRDIClassInspector *classInspector;
 
 @end
 
@@ -24,12 +24,18 @@ static CRDIInjector *defaultInjector = nil;
 
 + (CRDIInjector *)defaultInjector
 {
-    return defaultInjector;
+    return sDefaultInjector;
 }
 
 + (void)setDefaultInjector:(CRDIInjector *)aDefaultInjector
 {
-    defaultInjector = aDefaultInjector;
+    sDefaultInjector = aDefaultInjector;
+}
+
+- (id)init
+{
+    NSAssert(NO, @"Use initWithContainer: instead");
+    return nil;
 }
 
 - (id)initWithContainer:(CRDIContainer *)aContainer
@@ -39,31 +45,40 @@ static CRDIInjector *defaultInjector = nil;
     
     if (self) {
         self.container = aContainer;
+        self.classInspector = [CRDIClassInspector new];
+        self.classesCache = [NSMutableDictionary new];
     }
     
     return self;
 }
 
-- (void)injectImplementationsToInstance:(id<NSObject>)aInstance
+- (void)injectTo:(id)aInstance
 {
     NSParameterAssert(aInstance);
-}
-
-- (void)injectObjecPropertiesToInstance:(id)aInstance
-{
-    NSString *className = NSStringFromClass([aInstance class]);
+    NSParameterAssert(self.classesCache);
     
-    CRDICachedInjectedClassModel *cachedClassModel = self.classesCache[className];
+    DIClassTemplate *cachedClassTeamplate = [self classTemplateForInstance:aInstance];
     
-    for (NSString *propertyName in cachedClassModel.propertiesList) {
-        Protocol *propertyProtocol = [cachedClassModel getProtocolForPropertyNamed:propertyName];
-        
-        id <CRDIDependencyBuilder> builder = [self.container builderForProtocol:propertyProtocol];
+    for (DIPropertyModel *propertyModel in cachedClassTeamplate.properties) {
+        id <CRDIDependencyBuilder> builder = [self.container builderForProtocol:propertyModel.protocol];
         
         id buildedObject = [builder build];
         
-        [aInstance setValue:buildedObject forKey:propertyName];
+        [aInstance setValue:buildedObject forKey:propertyModel.name];
     }
+}
+
+- (DIClassTemplate *)classTemplateForInstance:(id)aInstance
+{
+    NSString *className = NSStringFromClass([aInstance class]);
+    
+    DIClassTemplate *cachedClassTeamplate = self.classesCache[className];
+    
+    if (cachedClassTeamplate == nil) {
+        cachedClassTeamplate = [self.classInspector inspect:[aInstance class]];
+        self.classesCache[className] = cachedClassTeamplate;
+    }
+    return cachedClassTeamplate;
 }
 
 @end

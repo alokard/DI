@@ -11,6 +11,4 @@
 
 @interface CRDIDefaultPropertyNameMatcher : NSObject <CRDIPropertyNameMatcher>
 
-
-
 @end

@@ -66,7 +66,7 @@
 {
     DIPropertyModel *m = [DIPropertyModel new];
     
-    m.procol = [self extractProtocolFromPropertyEncoding:property.typeEncoding];
+    m.protocol = [self extractProtocolFromPropertyEncoding:property.typeEncoding];
     m.name = property.name;
     
     return m;

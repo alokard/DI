@@ -10,6 +10,6 @@
 
 @protocol CRDIInstanceInjector <NSObject>
 
-- (void)injectImplementationsToInstance:(id <NSObject>)aInstance;
+- (void)injectTo:(id <NSObject>)aInstance;
 
 @end

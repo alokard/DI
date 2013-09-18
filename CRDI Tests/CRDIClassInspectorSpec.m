@@ -34,12 +34,12 @@ describe(@"Class inspection", ^{
             DIPropertyModel *propetry = _template.properties[0];
             
             [[theValue([propetry.name isEqualToString:@"ioc_injected"]) should] beTrue];
-            [[theValue(propetry.procol == @protocol(CRDISampleProtocol)) should] beTrue];
+            [[theValue(propetry.protocol == @protocol(CRDISampleProtocol)) should] beTrue];
             
             DIPropertyModel *propetry2 = _template.properties[1];
             
             [[theValue([propetry2.name isEqualToString:@"ioc_testField"]) should] beTrue];
-            [[theValue(propetry2.procol == @protocol(CRDIAnotherSampleProtocol)) should] beTrue];
+            [[theValue(propetry2.protocol == @protocol(CRDIAnotherSampleProtocol)) should] beTrue];
         });
     });
     
