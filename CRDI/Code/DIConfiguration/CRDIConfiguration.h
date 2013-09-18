@@ -11,6 +11,7 @@
 @interface CRDIConfiguration : NSObject
 
 @property (nonatomic, weak, readonly) CRDIConfiguration *parentConfiguration;
+@property (nonatomic, weak, readonly) CRDIContainer *container;
 
 - (id)initWithContainer:(CRDIContainer *)aContainer;
 - (id)initWithParentConfiguratuion:(CRDIConfiguration *)aConfiguration container:(CRDIContainer *)aContainer;
