@@ -29,12 +29,17 @@ describe(@"Class inspection", ^{
         it(@"should return class template with properties to inject", ^{
             [[_template.properties should] beNonNil];
             [[_template.properties shouldNot] beEmpty];
-            [[_template.properties should] haveCountOf:1];
+            [[_template.properties should] haveCountOf:2];
             
             DIPropertyModel *propetry = _template.properties[0];
             
             [[theValue([propetry.name isEqualToString:@"ioc_injected"]) should] beTrue];
             [[theValue(propetry.procol == @protocol(CRDISampleProtocol)) should] beTrue];
+            
+            DIPropertyModel *propetry2 = _template.properties[1];
+            
+            [[theValue([propetry2.name isEqualToString:@"ioc_testField"]) should] beTrue];
+            [[theValue(propetry2.procol == @protocol(CRDIAnotherSampleProtocol)) should] beTrue];
         });
     });
     

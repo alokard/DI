@@ -39,6 +39,8 @@ describe(@"CRDIInjector Specs", ^{
         
         [injector injectImplementationsToInstance:classWhichMustBeInjected];
         
+        [[classWhichMustBeInjected.ioc_injected shouldNot] beNil];
+        
         [[classWhichMustBeInjected.ioc_injected should] equal:sampleObject];
         
         [[theValue([classWhichMustBeInjected.ioc_injected conformsToProtocol:@protocol(CRDISampleProtocol)]) should] beTrue];

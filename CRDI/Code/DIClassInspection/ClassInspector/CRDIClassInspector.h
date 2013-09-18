@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "DIClassTemplate.h"
+#import "CRDIPropertyNameMatcher.h"
 
 @interface CRDIClassInspector : NSObject
+
+- (id)initWithPropertyMatcher:(id<CRDIPropertyNameMatcher>)matcher;
 
 - (DIClassTemplate*)inspect:(Class)instanceClass;
 
