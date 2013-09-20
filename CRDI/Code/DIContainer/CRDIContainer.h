@@ -28,4 +28,6 @@
 
 - (id <CRDIDependencyBuilder>)builderForProtocol:(Protocol *)aProtocol;
 
+- (NSArray *)buidersForProtocol:(Protocol *)aProtocol;
+
 @end
