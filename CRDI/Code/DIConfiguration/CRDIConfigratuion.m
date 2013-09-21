@@ -30,6 +30,7 @@
     
     if (self) {
         self.container = aContainer;
+        [self configure];
     }
     
     return self;

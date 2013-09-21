@@ -206,7 +206,7 @@ static CRDIContainer *defaultContainer = nil;
 - (void)checkIfProtocolNotBinded:(Protocol *)aProtocol
 {
     if (![self protocolIsBinded:aProtocol]) {
-        @throw [CRDIException exceptionWithReason:[NSString stringWithFormat:@"Builder for protocol %@ already binded", [self stringFromPorotocol:aProtocol]]];
+        @throw [CRDIException exceptionWithReason:[NSString stringWithFormat:@"Builder for protocol %@ is not binded", [self stringFromPorotocol:aProtocol]]];
     }
 }
 

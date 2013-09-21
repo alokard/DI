@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CriolloKitDI"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "DI framework for Criollo Kit"
 
   s.description  = <<-DESC
