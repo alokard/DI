@@ -32,6 +32,7 @@
 		E25764918F7C42B1801BDC47 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E706A687C456799F5BBF6 /* libPods.a */; };
 		EA06443417E85F9C00CF1132 /* CRDIException.m in Sources */ = {isa = PBXBuildFile; fileRef = EA06443317E85F9C00CF1132 /* CRDIException.m */; };
 		EA06443517E8610900CF1132 /* CRDIException.m in Sources */ = {isa = PBXBuildFile; fileRef = EA06443317E85F9C00CF1132 /* CRDIException.m */; };
+		EA0D366217ED9CC30022E216 /* CRDISampeConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0D366017ED9CC10022E216 /* CRDISampeConfiguration.m */; };
 		EA16E22F17E7358100F90D98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA16E22E17E7358100F90D98 /* Foundation.framework */; };
 		EA435CBD17E9B37C007F3878 /* CRDIInjectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA435CBC17E9B37C007F3878 /* CRDIInjectorSpec.m */; };
 		EA435CBE17E9B7BD007F3878 /* CRDIInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E2E17E735B2002A0D81 /* CRDIInjector.m */; };
@@ -105,6 +106,8 @@
 		AD7A72E117E9C7EA00602401 /* CRDIDefaultPropertyNameMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIDefaultPropertyNameMatcher.m; sourceTree = "<group>"; };
 		EA06443217E85F9C00CF1132 /* CRDIException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDIException.h; sourceTree = "<group>"; };
 		EA06443317E85F9C00CF1132 /* CRDIException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIException.m; sourceTree = "<group>"; };
+		EA0D365F17ED9CC10022E216 /* CRDISampeConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDISampeConfiguration.h; sourceTree = "<group>"; };
+		EA0D366017ED9CC10022E216 /* CRDISampeConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDISampeConfiguration.m; sourceTree = "<group>"; };
 		EA16E22B17E7358100F90D98 /* libCRDI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCRDI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA16E22E17E7358100F90D98 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA16E23217E7358100F90D98 /* CRDI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRDI-Prefix.pch"; sourceTree = "<group>"; };
@@ -377,11 +380,11 @@
 				EA5B9E5C17E73C94002A0D81 /* CRDIBuilderSpec.m */,
 				EA58218F17E865A10043406A /* CRDIConfigurationSpec.m */,
 				EA435CBC17E9B37C007F3878 /* CRDIInjectorSpec.m */,
-				EA5B9E5017E739AA002A0D81 /* CRDITestObjects */,
-				EA5B9E4117E735C1002A0D81 /* Supporting Files */,
 				AD7A72D817E9C2D100602401 /* CRDIClassInspectorSpec.m */,
 				AD1857C117E9C8D700B0A886 /* CRDIPropertyNameMatcherSpec.m */,
 				AD24C80E17E9D91500E0ED9E /* CRDIAutoInjectorSpec.m */,
+				EA5B9E5017E739AA002A0D81 /* CRDITestObjects */,
+				EA5B9E4117E735C1002A0D81 /* Supporting Files */,
 			);
 			path = "CRDI Tests";
 			sourceTree = "<group>";
@@ -399,6 +402,8 @@
 		EA5B9E5017E739AA002A0D81 /* CRDITestObjects */ = {
 			isa = PBXGroup;
 			children = (
+				EA0D365F17ED9CC10022E216 /* CRDISampeConfiguration.h */,
+				EA0D366017ED9CC10022E216 /* CRDISampeConfiguration.m */,
 				EA5B9E5117E739AA002A0D81 /* CRDIInjectedClass.h */,
 				EA5B9E5217E739AA002A0D81 /* CRDIInjectedClass.m */,
 				EA5B9E5317E739AA002A0D81 /* CRDISampleClass.h */,
@@ -607,6 +612,7 @@
 				AD24C81317E9D98D00E0ED9E /* CRDIInjectedClassChild.m in Sources */,
 				AD7A72E317E9C7EA00602401 /* CRDIDefaultPropertyNameMatcher.m in Sources */,
 				AD7A72DA17E9C2E800602401 /* CRDIClassInspectorSpec.m in Sources */,
+				EA0D366217ED9CC30022E216 /* CRDISampeConfiguration.m in Sources */,
 				EA5B9E4E17E73699002A0D81 /* CRDIContainer.m in Sources */,
 				EA5B9E4F17E7369E002A0D81 /* CRDIConfigratuion.m in Sources */,
 			);
