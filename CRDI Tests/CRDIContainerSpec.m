@@ -121,7 +121,6 @@ describe(@"CRDIContainerSpecs", ^{
         });
         
     });
-
 });
 
 SPEC_END

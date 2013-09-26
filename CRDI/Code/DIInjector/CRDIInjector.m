@@ -67,6 +67,10 @@ static CRDIInjector *sDefaultInjector = nil;
         
         id <CRDIDependencyBuilder> builder = [self.container builderForProtocol:propertyModel.protocol];
         
+        if (!builder) {
+            continue;
+        }
+        
         id buildedObject = [builder build];
         
         [aInstance setValue:buildedObject forKey:propertyModel.name];
