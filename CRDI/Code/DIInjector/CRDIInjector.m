@@ -60,6 +60,11 @@ static CRDIInjector *sDefaultInjector = nil;
     DIClassTemplate *cachedClassTeamplate = [self classTemplateForInstance:aInstance];
     
     for (DIPropertyModel *propertyModel in cachedClassTeamplate.properties) {
+        if (!propertyModel.protocol) {
+            NSLog(@"Warrning: Protocol not found for property: %@", propertyModel.name);
+            continue;
+        }
+        
         id <CRDIDependencyBuilder> builder = [self.container builderForProtocol:propertyModel.protocol];
         
         id buildedObject = [builder build];

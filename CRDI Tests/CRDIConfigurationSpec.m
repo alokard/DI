@@ -8,6 +8,7 @@
 
 #import <Kiwi.h>
 #import "CRDIConfiguration.h"
+#import "CRDISampeConfiguration.h"
 
 SPEC_BEGIN(CRDIConfigurationSpec)
 
@@ -27,6 +28,13 @@ describe(@"CRDIConfiguration Specs", ^{
     it(@"Should raise due to init with nil parent module", ^{
         [[theBlock(^{
             [[CRDIConfiguration alloc] initWithParentConfiguratuion:nil container:nil];
+        }) should] raise];
+    });
+    
+    it(@"Should raise due to adding same configuration class",^{
+        CRDIConfiguration *configuration = [CRDIConfiguration new];
+        [[theBlock(^{
+            [configuration includeConfigurationWithClass:[CRDIConfiguration class]];
         }) should] raise];
     });
 });

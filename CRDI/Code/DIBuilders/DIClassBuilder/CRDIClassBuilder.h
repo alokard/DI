@@ -10,6 +10,8 @@
 
 @interface CRDIClassBuilder : NSObject <CRDIDependencyBuilder>
 
+@property (nonatomic, unsafe_unretained, readonly) Class classForBuild;
+
 - (id)initWithClass:(Class)aClass;
 
 @end

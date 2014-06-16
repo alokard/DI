@@ -49,9 +49,11 @@ static CRDIContainer *defaultContainer = nil;
     NSParameterAssert(aClass);
     NSParameterAssert(aProtocol);
     
+    [self checkIfBuilderForClass:aClass alreadyExistsForProtocol:aProtocol];
+    
     CRDIClassBuilder *classBuilder = [self classBuilderFromClass:aClass];
     
-    [self addBuilder:classBuilder forProtocol:aProtocol];
+    [self addClassBuilder:classBuilder forProtocol:aProtocol];
 }
 
 - (void)bindBlock:(CRDIContainerBindBlock)aBlock toProtocol:(Protocol *)aProtocol
@@ -59,15 +61,19 @@ static CRDIContainer *defaultContainer = nil;
     NSParameterAssert(aBlock);
     NSParameterAssert(aProtocol);
     
+    [self checkIfProtocolAlreadyBinded:aProtocol];
+    
     CRDIBlockBuilder *blockBuilder = [self blockBuilderFromBlock:aBlock];
     
-    [self addBuilder:blockBuilder forProtocol:aProtocol];
+    [self addClassBuilder:blockBuilder forProtocol:aProtocol];
 }
 
 - (void)bindEagerSingletoneClass:(Class)aClass toProtocol:(Protocol *)aProtocol
 {
     NSParameterAssert(aClass);
     NSParameterAssert(aProtocol);
+    
+    [self checkIfProtocolAlreadyBinded:aProtocol];
     
     CRDISingletoneBuilder *eaggerSingletoneWithClassBuilder = [self eagerSingletoneBuilderForClass:aClass];
     
@@ -79,6 +85,8 @@ static CRDIContainer *defaultContainer = nil;
     NSParameterAssert(aBlock);
     NSParameterAssert(aProtocol);
     
+    [self checkIfProtocolAlreadyBinded:aProtocol];
+    
     CRDISingletoneBuilder *eagerSingletoneWithBlockbuilder = [self eagerSingletoneBuilderForBlock:aBlock];
     
     [self addBuilder:eagerSingletoneWithBlockbuilder forProtocol:aProtocol];
@@ -89,27 +97,66 @@ static CRDIContainer *defaultContainer = nil;
     NSParameterAssert(aBuilder);
     NSParameterAssert(aProtocol);
     
-    if (![aBuilder conformsToProtocol:@protocol(CRDIDependencyBuilder)]) {
-        @throw [CRDIException exceptionWithReason:[NSString stringWithFormat:@"%@ not impelemnts CRDIDependencyBuilder interface",
-                                                   NSStringFromClass([aBuilder class])]];
-    }
+    NSString *protocolKey = [self stringFromPorotocol:aProtocol];
+    
+    self.configurationDictionary[protocolKey] = aBuilder;
+}
+
+- (void)addClassBuilder:(id <CRDIDependencyBuilder>)aBuilder forProtocol:(Protocol *)aProtocol
+{
+    NSParameterAssert(aBuilder);
+    NSParameterAssert(aProtocol);
     
     NSString *protocolKey = [self stringFromPorotocol:aProtocol];
     
-    [self checkKeyIsAlreadyExists:protocolKey];
+    NSMutableArray *buildersArray = self.configurationDictionary[protocolKey];
     
-    [self.configurationDictionary setObject:aBuilder forKey:protocolKey];
+    if (!buildersArray) {
+        buildersArray = [NSMutableArray arrayWithObject:aBuilder];
+    } else {
+        [buildersArray addObject:aBuilder];
+    }
+    
+    self.configurationDictionary[protocolKey] = buildersArray;
 }
 
 - (id <CRDIDependencyBuilder>)builderForProtocol:(Protocol *)aProtocol
 {
     NSParameterAssert(aProtocol);
     
+    [self checkIfProtocolNotBinded:aProtocol];
+    
     NSString *protocolKey = [self stringFromPorotocol:aProtocol];
     
-    [self checkIfKeyNotExists:protocolKey];
+    id builderWrapper = self.configurationDictionary[protocolKey];
     
-    return self.configurationDictionary[protocolKey];
+    if ([builderWrapper isKindOfClass:[NSArray class]]) {
+        return [builderWrapper lastObject];
+    } else if ([builderWrapper conformsToProtocol:@protocol(CRDIDependencyBuilder)]) {
+        return builderWrapper;
+    }
+    
+    [CRDIException exceptionWithReason:@"Wrong builder class"];
+    
+    return nil;
+}
+
+- (NSArray *)buidersForProtocol:(Protocol *)aProtocol
+{
+    NSParameterAssert(aProtocol);
+    
+    [self checkIfProtocolNotBinded:aProtocol];
+    
+    NSString *protocolKey = NSStringFromProtocol(aProtocol);
+    
+    NSArray *buildersArray = self.configurationDictionary[protocolKey];
+    
+    if (![buildersArray isKindOfClass:[NSArray class]]) {
+        [CRDIException exceptionWithReason:[NSString stringWithFormat:@"Not found builders array for protocol: %@", protocolKey]];
+    }
+    
+    return buildersArray;
+
 }
 
 - (CRDIClassBuilder *)classBuilderFromClass:(Class)aClass
@@ -136,18 +183,38 @@ static CRDIContainer *defaultContainer = nil;
     return [[CRDISingletoneBuilder alloc] initWithBuilder:blockBuilder];
 }
 
-- (void)checkKeyIsAlreadyExists:(NSString *)aKey
+- (void)checkIfBuilderForClass:(Class)aClass alreadyExistsForProtocol:(Protocol *)aProtocol
 {
-    if (self.configurationDictionary[aKey]) {
-        @throw [CRDIException exceptionWithReason:[NSString stringWithFormat:@"Container already contains protocol %@", aKey]];
+    NSString *protocolKey = NSStringFromProtocol(aProtocol);
+    
+    NSArray *buildersArray = self.configurationDictionary[protocolKey];
+    
+    for (CRDIClassBuilder *classBuilder in buildersArray) {
+        if (classBuilder.classForBuild == aClass) {
+            [CRDIException exceptionWithReason:[NSString stringWithFormat:@"builders array already contains builder for %@ class", NSStringFromClass(aClass)]];
+        }
     }
 }
 
-- (void)checkIfKeyNotExists:(NSString *)aKey
+- (void)checkIfProtocolAlreadyBinded:(Protocol *)aProtocol
 {
-    if (!self.configurationDictionary[aKey]) {
-        @throw [CRDIException exceptionWithReason:[NSString stringWithFormat:@"Builder for protocol %@ not binded", aKey]];
+    if ([self protocolIsBinded:aProtocol]) {
+        @throw [CRDIException exceptionWithReason:[NSString stringWithFormat:@"Builder for protocol %@ already binded", [self stringFromPorotocol:aProtocol]]];
     }
+}
+
+- (void)checkIfProtocolNotBinded:(Protocol *)aProtocol
+{
+    if (![self protocolIsBinded:aProtocol]) {
+        @throw [CRDIException exceptionWithReason:[NSString stringWithFormat:@"Builder for protocol %@ is not binded", [self stringFromPorotocol:aProtocol]]];
+    }
+}
+
+- (BOOL)protocolIsBinded:(Protocol *)aProtocol
+{
+    NSString *protocolKey = [self stringFromPorotocol:aProtocol];
+    
+    return self.configurationDictionary[protocolKey] != nil;
 }
 
 - (NSString *)stringFromPorotocol:(Protocol *)aProtocol

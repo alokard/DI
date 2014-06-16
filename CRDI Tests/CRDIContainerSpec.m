@@ -14,6 +14,7 @@
 #import "CRDISingletoneBuilder.h"
 
 #import "CRDISampleClass.h"
+#import "CRDIInjectedClass.h"
 #import "CRDISampleProtocol.h"
 
 SPEC_BEGIN(CRDIContainerSpec)
@@ -100,11 +101,22 @@ describe(@"CRDIContainerSpecs", ^{
             [[theValue([builder conformsToProtocol:@protocol(CRDIDependencyBuilder)]) should] beTrue];
         });
         
-        it(@"Should raise exception due to already added protocol", ^{
+        it(@"Should return array of builders for protocol", ^{
             [container bindClass:[CRDISampleClass class] toProtocol:sampleProtocol];
-             
-             [[theBlock(^{
-                [container bindClass:[CRDISampleClass class] toProtocol:sampleProtocol];
+            [container bindClass:[CRDIInjectedClass class] toProtocol:sampleProtocol];
+            
+            NSArray *buildersArray = [container buidersForProtocol:sampleProtocol];
+            
+            [[buildersArray should] haveCountOf:2];
+        });
+        
+        it(@"Should raise exception due to already added block for same protocol", ^{
+            [container bindClass:[CRDISampleClass class] toProtocol:sampleProtocol];
+            
+            [[theBlock(^{
+                [container bindBlock:^id{
+                    return nil;
+                } toProtocol:sampleProtocol];
             }) should] raise];
         });
         
