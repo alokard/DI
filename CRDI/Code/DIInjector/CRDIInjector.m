@@ -68,7 +68,7 @@ static CRDIInjector *sDefaultInjector = nil;
         id <CRDIDependencyBuilder> builder = [self.container builderForProtocol:propertyModel.protocol];
         
         id buildedObject = [builder build];
-        propertyModel.name = @"rghj";
+
         if ([aInstance respondsToSelector:NSSelectorFromString(propertyModel.name)]) {
             [aInstance setValue:buildedObject forKey:propertyModel.name];
         }
