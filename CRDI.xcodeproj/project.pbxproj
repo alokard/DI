@@ -7,6 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20880B3F1D477DB60072E7A4 /* CriolloKitDI.h in Headers */ = {isa = PBXBuildFile; fileRef = 20880B3E1D477DB60072E7A4 /* CriolloKitDI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B441D477DE10072E7A4 /* CRDIAutoInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = AD24C80B17E9D8BA00E0ED9E /* CRDIAutoInjector.m */; };
+		20880B451D477DE10072E7A4 /* NSObject+AutoInject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD24C81517E9DEA600E0ED9E /* NSObject+AutoInject.m */; };
+		20880B461D477DE10072E7A4 /* CRDIGlobalAutoInjectionStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD60411017E9E57D00707FAF /* CRDIGlobalAutoInjectionStorage.m */; };
+		20880B471D477DE10072E7A4 /* CRDIDefaultPropertyNameMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A72E117E9C7EA00602401 /* CRDIDefaultPropertyNameMatcher.m */; };
+		20880B481D477DE10072E7A4 /* CRDIClassInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A72D617E9C24200602401 /* CRDIClassInspector.m */; };
+		20880B491D477DE10072E7A4 /* DIClassTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A72D017E9C1CF00602401 /* DIClassTemplate.m */; };
+		20880B4A1D477DE10072E7A4 /* DIPropertyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A72D317E9C1E000602401 /* DIPropertyModel.m */; };
+		20880B4B1D477DE10072E7A4 /* CRDIException.m in Sources */ = {isa = PBXBuildFile; fileRef = EA06443317E85F9C00CF1132 /* CRDIException.m */; };
+		20880B4C1D477DE10072E7A4 /* CRDISingletoneBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ACD69C17E75956003BA236 /* CRDISingletoneBuilder.m */; };
+		20880B4D1D477DE10072E7A4 /* CRDIBlockBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E2217E735B2002A0D81 /* CRDIBlockBuilder.m */; };
+		20880B4E1D477DE10072E7A4 /* CRDIClassBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E2517E735B2002A0D81 /* CRDIClassBuilder.m */; };
+		20880B4F1D477DE10072E7A4 /* CRDIConfigratuion.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E2717E735B2002A0D81 /* CRDIConfigratuion.m */; };
+		20880B501D477DE10072E7A4 /* CRDIContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E2B17E735B2002A0D81 /* CRDIContainer.m */; };
+		20880B511D477DE10072E7A4 /* CRDIInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E2E17E735B2002A0D81 /* CRDIInjector.m */; };
+		20880B581D477E1B0072E7A4 /* CRDIAutoInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = AD24C80A17E9D8BA00E0ED9E /* CRDIAutoInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B591D477E1B0072E7A4 /* NSObject+AutoInject.h in Headers */ = {isa = PBXBuildFile; fileRef = AD24C81417E9DEA600E0ED9E /* NSObject+AutoInject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B5A1D477E1B0072E7A4 /* CRDIGlobalAutoInjectionStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = AD60410F17E9E57D00707FAF /* CRDIGlobalAutoInjectionStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B5B1D477E1B0072E7A4 /* CRDIPropertyNameMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = AD7A72DF17E9C7D500602401 /* CRDIPropertyNameMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B5C1D477E1B0072E7A4 /* CRDIDefaultPropertyNameMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = AD7A72E017E9C7EA00602401 /* CRDIDefaultPropertyNameMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B5D1D477E1B0072E7A4 /* CRDIClassInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = AD7A72D517E9C24200602401 /* CRDIClassInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B5E1D477E1B0072E7A4 /* DIClassTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = AD7A72CF17E9C1CF00602401 /* DIClassTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B5F1D477E1B0072E7A4 /* DIPropertyModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AD7A72D217E9C1E000602401 /* DIPropertyModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B601D477E1B0072E7A4 /* CRDIException.h in Headers */ = {isa = PBXBuildFile; fileRef = EA06443217E85F9C00CF1132 /* CRDIException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B611D477E1B0072E7A4 /* CRDITypedefs.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B9E1E17E735B2002A0D81 /* CRDITypedefs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B621D477E1B0072E7A4 /* CRDISingletoneBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 68ACD69B17E75956003BA236 /* CRDISingletoneBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B631D477E1B0072E7A4 /* CRDIBlockBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B9E2117E735B2002A0D81 /* CRDIBlockBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B641D477E1B0072E7A4 /* CRDIClassBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B9E2417E735B2002A0D81 /* CRDIClassBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B651D477E1B0072E7A4 /* CRDIConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B9E2817E735B2002A0D81 /* CRDIConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B661D477E1B0072E7A4 /* CRDIContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B9E2A17E735B2002A0D81 /* CRDIContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B671D477E1B0072E7A4 /* CRDIInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B9E2D17E735B2002A0D81 /* CRDIInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B681D477E1B0072E7A4 /* CRDIDependencyBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B9E3017E735B2002A0D81 /* CRDIDependencyBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20880B7B1D4781680072E7A4 /* ISMethodSwizzlingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20880B7A1D4781680072E7A4 /* ISMethodSwizzlingFramework.framework */; };
+		20880B7D1D4781940072E7A4 /* Kiwi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20880B7C1D4781940072E7A4 /* Kiwi.framework */; };
+		20880B981D4783140072E7A4 /* MACObjCRuntimeFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20880B971D4783140072E7A4 /* MACObjCRuntimeFramework.framework */; };
+		20880B9B1D4784C80072E7A4 /* CRDIInstanceInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = EA435CA717E98BDC007F3878 /* CRDIInstanceInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A8DAB7A2B134E5585DBAADE /* libPods-CRDISpecs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 237FFA4A0C19449FB18A9784 /* libPods-CRDISpecs.a */; };
 		68ACD69917E75411003BA236 /* CRDiSingletoneBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ACD69817E75411003BA236 /* CRDiSingletoneBuilderSpec.m */; };
 		68ACD69D17E75956003BA236 /* CRDISingletoneBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ACD69C17E75956003BA236 /* CRDISingletoneBuilder.m */; };
@@ -78,12 +114,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		14721C2EAA968FE646450E84 /* Pods-CRDISpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRDISpecs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRDISpecs/Pods-CRDISpecs.debug.xcconfig"; sourceTree = "<group>"; };
+		20880B3C1D477DB50072E7A4 /* CriolloKitDI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CriolloKitDI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20880B3E1D477DB60072E7A4 /* CriolloKitDI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CriolloKitDI.h; sourceTree = "<group>"; };
+		20880B401D477DB60072E7A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20880B521D477E030072E7A4 /* libISMethodSwizzling.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libISMethodSwizzling.a; path = "Pods/../build/Debug-iphoneos/libISMethodSwizzling.a"; sourceTree = "<group>"; };
+		20880B531D477E030072E7A4 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "Pods/../build/Debug-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
+		20880B541D477E030072E7A4 /* libMAObjCRuntime.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMAObjCRuntime.a; path = "Pods/../build/Debug-iphoneos/libMAObjCRuntime.a"; sourceTree = "<group>"; };
+		20880B7A1D4781680072E7A4 /* ISMethodSwizzlingFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ISMethodSwizzlingFramework.framework; sourceTree = "<group>"; };
+		20880B7C1D4781940072E7A4 /* Kiwi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kiwi.framework; sourceTree = "<group>"; };
+		20880B971D4783140072E7A4 /* MACObjCRuntimeFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MACObjCRuntimeFramework.framework; sourceTree = "<group>"; };
 		237FFA4A0C19449FB18A9784 /* libPods-CRDISpecs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CRDISpecs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65FB563323762897682DDBDF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		68ACD69817E75411003BA236 /* CRDiSingletoneBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDiSingletoneBuilderSpec.m; sourceTree = "<group>"; };
 		68ACD69B17E75956003BA236 /* CRDISingletoneBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDISingletoneBuilder.h; sourceTree = "<group>"; };
 		68ACD69C17E75956003BA236 /* CRDISingletoneBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDISingletoneBuilder.m; sourceTree = "<group>"; };
 		942E706A687C456799F5BBF6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9327771A74846319CA6BF9E /* Pods-CRDISpecs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRDISpecs.xcconfig"; path = "Pods/Pods-CRDISpecs.xcconfig"; sourceTree = "<group>"; };
 		AD1857C117E9C8D700B0A886 /* CRDIPropertyNameMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIPropertyNameMatcherSpec.m; sourceTree = "<group>"; };
 		AD24C80A17E9D8BA00E0ED9E /* CRDIAutoInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDIAutoInjector.h; sourceTree = "<group>"; };
 		AD24C80B17E9D8BA00E0ED9E /* CRDIAutoInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIAutoInjector.m; sourceTree = "<group>"; };
@@ -104,6 +150,8 @@
 		AD7A72DF17E9C7D500602401 /* CRDIPropertyNameMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDIPropertyNameMatcher.h; sourceTree = "<group>"; };
 		AD7A72E017E9C7EA00602401 /* CRDIDefaultPropertyNameMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDIDefaultPropertyNameMatcher.h; sourceTree = "<group>"; };
 		AD7A72E117E9C7EA00602401 /* CRDIDefaultPropertyNameMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIDefaultPropertyNameMatcher.m; sourceTree = "<group>"; };
+		E343444FE5BC7F00475A60BC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E48B18B3105CBAFAF120906F /* Pods-CRDISpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRDISpecs.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRDISpecs/Pods-CRDISpecs.release.xcconfig"; sourceTree = "<group>"; };
 		EA06443217E85F9C00CF1132 /* CRDIException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDIException.h; sourceTree = "<group>"; };
 		EA06443317E85F9C00CF1132 /* CRDIException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIException.m; sourceTree = "<group>"; };
 		EA0D365F17ED9CC10022E216 /* CRDISampeConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDISampeConfiguration.h; sourceTree = "<group>"; };
@@ -138,10 +186,19 @@
 		EA5B9E5417E739AA002A0D81 /* CRDISampleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDISampleClass.m; sourceTree = "<group>"; };
 		EA5B9E5517E739AA002A0D81 /* CRDISampleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDISampleProtocol.h; sourceTree = "<group>"; };
 		EA5B9E5C17E73C94002A0D81 /* CRDIBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIBuilderSpec.m; sourceTree = "<group>"; };
-		F9BD4F43A3CD4BC6BC0014EA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		20880B381D477DB50072E7A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20880B981D4783140072E7A4 /* MACObjCRuntimeFramework.framework in Frameworks */,
+				20880B7D1D4781940072E7A4 /* Kiwi.framework in Frameworks */,
+				20880B7B1D4781680072E7A4 /* ISMethodSwizzlingFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA16E22817E7358100F90D98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,6 +221,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20880B3D1D477DB50072E7A4 /* CriolloKitDI */ = {
+			isa = PBXGroup;
+			children = (
+				20880B3E1D477DB60072E7A4 /* CriolloKitDI.h */,
+				20880B401D477DB60072E7A4 /* Info.plist */,
+			);
+			path = CriolloKitDI;
+			sourceTree = "<group>";
+		};
+		259D58203F278D641A840CE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E343444FE5BC7F00475A60BC /* Pods.debug.xcconfig */,
+				65FB563323762897682DDBDF /* Pods.release.xcconfig */,
+				14721C2EAA968FE646450E84 /* Pods-CRDISpecs.debug.xcconfig */,
+				E48B18B3105CBAFAF120906F /* Pods-CRDISpecs.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		68ACD69A17E7593E003BA236 /* DISingletoneBuilder */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,10 +317,10 @@
 			children = (
 				EA16E23017E7358100F90D98 /* CRDI */,
 				EA5B9E4017E735C1002A0D81 /* CRDI Tests */,
+				20880B3D1D477DB50072E7A4 /* CriolloKitDI */,
 				EA16E22D17E7358100F90D98 /* Frameworks */,
 				EA16E22C17E7358100F90D98 /* Products */,
-				A9327771A74846319CA6BF9E /* Pods-CRDISpecs.xcconfig */,
-				F9BD4F43A3CD4BC6BC0014EA /* Pods.xcconfig */,
+				259D58203F278D641A840CE6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -252,6 +329,7 @@
 			children = (
 				EA16E22B17E7358100F90D98 /* libCRDI.a */,
 				EA5B9E3A17E735C1002A0D81 /* CRDISpecs.octest */,
+				20880B3C1D477DB50072E7A4 /* CriolloKitDI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,6 +337,12 @@
 		EA16E22D17E7358100F90D98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				20880B971D4783140072E7A4 /* MACObjCRuntimeFramework.framework */,
+				20880B7C1D4781940072E7A4 /* Kiwi.framework */,
+				20880B7A1D4781680072E7A4 /* ISMethodSwizzlingFramework.framework */,
+				20880B521D477E030072E7A4 /* libISMethodSwizzling.a */,
+				20880B531D477E030072E7A4 /* libKiwi.a */,
+				20880B541D477E030072E7A4 /* libMAObjCRuntime.a */,
 				EA16E22E17E7358100F90D98 /* Foundation.framework */,
 				EA5B9E3B17E735C1002A0D81 /* SenTestingKit.framework */,
 				237FFA4A0C19449FB18A9784 /* libPods-CRDISpecs.a */,
@@ -417,7 +501,54 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		20880B391D477DB50072E7A4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20880B3F1D477DB60072E7A4 /* CriolloKitDI.h in Headers */,
+				20880B581D477E1B0072E7A4 /* CRDIAutoInjector.h in Headers */,
+				20880B591D477E1B0072E7A4 /* NSObject+AutoInject.h in Headers */,
+				20880B5A1D477E1B0072E7A4 /* CRDIGlobalAutoInjectionStorage.h in Headers */,
+				20880B5B1D477E1B0072E7A4 /* CRDIPropertyNameMatcher.h in Headers */,
+				20880B5C1D477E1B0072E7A4 /* CRDIDefaultPropertyNameMatcher.h in Headers */,
+				20880B5D1D477E1B0072E7A4 /* CRDIClassInspector.h in Headers */,
+				20880B5E1D477E1B0072E7A4 /* DIClassTemplate.h in Headers */,
+				20880B5F1D477E1B0072E7A4 /* DIPropertyModel.h in Headers */,
+				20880B601D477E1B0072E7A4 /* CRDIException.h in Headers */,
+				20880B611D477E1B0072E7A4 /* CRDITypedefs.h in Headers */,
+				20880B621D477E1B0072E7A4 /* CRDISingletoneBuilder.h in Headers */,
+				20880B631D477E1B0072E7A4 /* CRDIBlockBuilder.h in Headers */,
+				20880B641D477E1B0072E7A4 /* CRDIClassBuilder.h in Headers */,
+				20880B651D477E1B0072E7A4 /* CRDIConfiguration.h in Headers */,
+				20880B661D477E1B0072E7A4 /* CRDIContainer.h in Headers */,
+				20880B671D477E1B0072E7A4 /* CRDIInjector.h in Headers */,
+				20880B681D477E1B0072E7A4 /* CRDIDependencyBuilder.h in Headers */,
+				20880B9B1D4784C80072E7A4 /* CRDIInstanceInjector.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		20880B3B1D477DB50072E7A4 /* CriolloKitDI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20880B431D477DB60072E7A4 /* Build configuration list for PBXNativeTarget "CriolloKitDI" */;
+			buildPhases = (
+				20880B371D477DB50072E7A4 /* Sources */,
+				20880B381D477DB50072E7A4 /* Frameworks */,
+				20880B391D477DB50072E7A4 /* Headers */,
+				20880B3A1D477DB50072E7A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CriolloKitDI;
+			productName = CriolloKitDI;
+			productReference = 20880B3C1D477DB50072E7A4 /* CriolloKitDI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		EA16E22A17E7358100F90D98 /* CRDI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA16E23917E7358100F90D98 /* Build configuration list for PBXNativeTarget "CRDI" */;
@@ -455,7 +586,7 @@
 			name = CRDISpecs;
 			productName = "CRDI Tests";
 			productReference = EA5B9E3A17E735C1002A0D81 /* CRDISpecs.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -464,9 +595,13 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CRDI;
+				LastTestingUpgradeCheck = 0730;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = CriolloKit;
 				TargetAttributes = {
+					20880B3B1D477DB50072E7A4 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					EA5B9E3917E735C1002A0D81 = {
 						TestTargetID = EA16E22A17E7358100F90D98;
 					};
@@ -486,11 +621,19 @@
 			targets = (
 				EA16E22A17E7358100F90D98 /* CRDI */,
 				EA5B9E3917E735C1002A0D81 /* CRDISpecs */,
+				20880B3B1D477DB50072E7A4 /* CriolloKitDI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		20880B3A1D477DB50072E7A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA5B9E3817E735C1002A0D81 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -514,7 +657,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-CRDISpecs-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CRDISpecs/Pods-CRDISpecs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		551611F93C4F48409368A111 /* Check Pods Manifest.lock */ = {
@@ -544,7 +687,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B8950B589AC54474862195E6 /* Check Pods Manifest.lock */ = {
@@ -564,6 +707,27 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		20880B371D477DB50072E7A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20880B441D477DE10072E7A4 /* CRDIAutoInjector.m in Sources */,
+				20880B451D477DE10072E7A4 /* NSObject+AutoInject.m in Sources */,
+				20880B461D477DE10072E7A4 /* CRDIGlobalAutoInjectionStorage.m in Sources */,
+				20880B471D477DE10072E7A4 /* CRDIDefaultPropertyNameMatcher.m in Sources */,
+				20880B481D477DE10072E7A4 /* CRDIClassInspector.m in Sources */,
+				20880B491D477DE10072E7A4 /* DIClassTemplate.m in Sources */,
+				20880B4A1D477DE10072E7A4 /* DIPropertyModel.m in Sources */,
+				20880B4B1D477DE10072E7A4 /* CRDIException.m in Sources */,
+				20880B4C1D477DE10072E7A4 /* CRDISingletoneBuilder.m in Sources */,
+				20880B4D1D477DE10072E7A4 /* CRDIBlockBuilder.m in Sources */,
+				20880B4E1D477DE10072E7A4 /* CRDIClassBuilder.m in Sources */,
+				20880B4F1D477DE10072E7A4 /* CRDIConfigratuion.m in Sources */,
+				20880B501D477DE10072E7A4 /* CRDIContainer.m in Sources */,
+				20880B511D477DE10072E7A4 /* CRDIInjector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA16E22717E7358100F90D98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -640,6 +804,102 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		20880B411D477DB60072E7A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = CriolloKitDI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.techery.CriolloKitDI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		20880B421D477DB60072E7A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = CriolloKitDI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.techery.CriolloKitDI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		EA16E23717E7358100F90D98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -698,7 +958,7 @@
 		};
 		EA16E23A17E7358100F90D98 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9BD4F43A3CD4BC6BC0014EA /* Pods.xcconfig */;
+			baseConfigurationReference = E343444FE5BC7F00475A60BC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/CRDI.dst;
@@ -714,7 +974,7 @@
 		};
 		EA16E23B17E7358100F90D98 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9BD4F43A3CD4BC6BC0014EA /* Pods.xcconfig */;
+			baseConfigurationReference = 65FB563323762897682DDBDF /* Pods.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/CRDI.dst;
@@ -730,7 +990,7 @@
 		};
 		EA5B9E4C17E735C1002A0D81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9327771A74846319CA6BF9E /* Pods-CRDISpecs.xcconfig */;
+			baseConfigurationReference = 14721C2EAA968FE646450E84 /* Pods-CRDISpecs.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_MODULES = YES;
@@ -764,7 +1024,7 @@
 		};
 		EA5B9E4D17E735C1002A0D81 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9327771A74846319CA6BF9E /* Pods-CRDISpecs.xcconfig */;
+			baseConfigurationReference = E48B18B3105CBAFAF120906F /* Pods-CRDISpecs.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_MODULES = YES;
@@ -796,6 +1056,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		20880B431D477DB60072E7A4 /* Build configuration list for PBXNativeTarget "CriolloKitDI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20880B411D477DB60072E7A4 /* Debug */,
+				20880B421D477DB60072E7A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		EA16E22617E7358100F90D98 /* Build configuration list for PBXProject "CRDI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

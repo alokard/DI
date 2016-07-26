@@ -9,7 +9,7 @@
 #import "NSObject+AutoInject.h"
 #import <objc/runtime.h>
 #import "CRDIGlobalAutoInjectionStorage.h"
-#import <ISMethodSwizzling/ISMethodSwizzling.h>
+#import <ISMethodSwizzlingFramework/ISMethodSwizzlingFramework.h>
 
 static const char *kAutoInjectStorageKey = "kAutoInjectStorageKey";
 static const char *kAutoInjectSwizzleFlagKey = "kAutoInjectSwizzleFlagKey";
