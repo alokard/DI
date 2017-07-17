@@ -7,19 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A8DAB7A2B134E5585DBAADE /* libPods-CRDISpecs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 237FFA4A0C19449FB18A9784 /* libPods-CRDISpecs.a */; };
+		44A35FFE1F1CF50F00D37278 /* RTProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A35FFD1F1CF50F00D37278 /* RTProperty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		44A360091F1CF67800D37278 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A35FFF1F1CF67800D37278 /* RTProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		44A3600A1F1CF67800D37278 /* RTUnregisteredClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A360011F1CF67800D37278 /* RTUnregisteredClass.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		44A3600B1F1CF67800D37278 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A360031F1CF67800D37278 /* RTMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		44A3600C1F1CF67800D37278 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A360051F1CF67800D37278 /* RTIvar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		44A3600D1F1CF67800D37278 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A360071F1CF67800D37278 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		68ACD69917E75411003BA236 /* CRDiSingletoneBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ACD69817E75411003BA236 /* CRDiSingletoneBuilderSpec.m */; };
 		68ACD69D17E75956003BA236 /* CRDISingletoneBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ACD69C17E75956003BA236 /* CRDISingletoneBuilder.m */; };
 		68ACD69E17E75956003BA236 /* CRDISingletoneBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ACD69C17E75956003BA236 /* CRDISingletoneBuilder.m */; };
 		AD1857C317E9C9FE00B0A886 /* CRDIPropertyNameMatcherSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1857C117E9C8D700B0A886 /* CRDIPropertyNameMatcherSpec.m */; };
-		AD24C80C17E9D8BA00E0ED9E /* CRDIAutoInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = AD24C80B17E9D8BA00E0ED9E /* CRDIAutoInjector.m */; };
-		AD24C80D17E9D8BA00E0ED9E /* CRDIAutoInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = AD24C80B17E9D8BA00E0ED9E /* CRDIAutoInjector.m */; };
-		AD24C81017E9D91500E0ED9E /* CRDIAutoInjectorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD24C80E17E9D91500E0ED9E /* CRDIAutoInjectorSpec.m */; };
 		AD24C81317E9D98D00E0ED9E /* CRDIInjectedClassChild.m in Sources */ = {isa = PBXBuildFile; fileRef = AD24C81217E9D98D00E0ED9E /* CRDIInjectedClassChild.m */; };
-		AD24C81617E9DEA600E0ED9E /* NSObject+AutoInject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD24C81517E9DEA600E0ED9E /* NSObject+AutoInject.m */; };
-		AD24C81717E9DEA700E0ED9E /* NSObject+AutoInject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD24C81517E9DEA600E0ED9E /* NSObject+AutoInject.m */; };
-		AD60411117E9E57D00707FAF /* CRDIGlobalAutoInjectionStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD60411017E9E57D00707FAF /* CRDIGlobalAutoInjectionStorage.m */; };
-		AD60411217E9E57D00707FAF /* CRDIGlobalAutoInjectionStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = AD60411017E9E57D00707FAF /* CRDIGlobalAutoInjectionStorage.m */; };
 		AD7A72D117E9C1CF00602401 /* DIClassTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A72D017E9C1CF00602401 /* DIClassTemplate.m */; };
 		AD7A72D417E9C1E000602401 /* DIPropertyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A72D317E9C1E000602401 /* DIPropertyModel.m */; };
 		AD7A72D717E9C24200602401 /* CRDIClassInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A72D617E9C24200602401 /* CRDIClassInspector.m */; };
@@ -29,7 +27,6 @@
 		AD7A72DD17E9C59200602401 /* DIPropertyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A72D317E9C1E000602401 /* DIPropertyModel.m */; };
 		AD7A72E217E9C7EA00602401 /* CRDIDefaultPropertyNameMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A72E117E9C7EA00602401 /* CRDIDefaultPropertyNameMatcher.m */; };
 		AD7A72E317E9C7EA00602401 /* CRDIDefaultPropertyNameMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A72E117E9C7EA00602401 /* CRDIDefaultPropertyNameMatcher.m */; };
-		E25764918F7C42B1801BDC47 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 942E706A687C456799F5BBF6 /* libPods.a */; };
 		EA06443417E85F9C00CF1132 /* CRDIException.m in Sources */ = {isa = PBXBuildFile; fileRef = EA06443317E85F9C00CF1132 /* CRDIException.m */; };
 		EA06443517E8610900CF1132 /* CRDIException.m in Sources */ = {isa = PBXBuildFile; fileRef = EA06443317E85F9C00CF1132 /* CRDIException.m */; };
 		EA0D366217ED9CC30022E216 /* CRDISampeConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0D366017ED9CC10022E216 /* CRDISampeConfiguration.m */; };
@@ -53,6 +50,7 @@
 		EA5B9E5D17E73C94002A0D81 /* CRDIBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E5C17E73C94002A0D81 /* CRDIBuilderSpec.m */; };
 		EA5B9E5E17E7493C002A0D81 /* CRDIBlockBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E2217E735B2002A0D81 /* CRDIBlockBuilder.m */; };
 		EA5B9E5F17E7493E002A0D81 /* CRDIClassBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E2517E735B2002A0D81 /* CRDIClassBuilder.m */; };
+		FAF6DDA91552E28B36E2A725 /* libPods-CRDISpecs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3855E7AEF98325E67AB4F20 /* libPods-CRDISpecs.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,22 +76,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		237FFA4A0C19449FB18A9784 /* libPods-CRDISpecs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CRDISpecs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44A35FFC1F1CF50F00D37278 /* RTProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTProperty.h; sourceTree = "<group>"; };
+		44A35FFD1F1CF50F00D37278 /* RTProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProperty.m; sourceTree = "<group>"; };
+		44A35FFF1F1CF67800D37278 /* RTProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTProtocol.m; sourceTree = "<group>"; };
+		44A360001F1CF67800D37278 /* RTProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTProtocol.h; sourceTree = "<group>"; };
+		44A360011F1CF67800D37278 /* RTUnregisteredClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTUnregisteredClass.m; sourceTree = "<group>"; };
+		44A360021F1CF67800D37278 /* RTUnregisteredClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTUnregisteredClass.h; sourceTree = "<group>"; };
+		44A360031F1CF67800D37278 /* RTMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMethod.m; sourceTree = "<group>"; };
+		44A360041F1CF67800D37278 /* RTMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMethod.h; sourceTree = "<group>"; };
+		44A360051F1CF67800D37278 /* RTIvar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTIvar.m; sourceTree = "<group>"; };
+		44A360061F1CF67800D37278 /* RTIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTIvar.h; sourceTree = "<group>"; };
+		44A360071F1CF67800D37278 /* MARTNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARTNSObject.m; sourceTree = "<group>"; };
+		44A360081F1CF67800D37278 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
+		517C9CFEC610556874A9F14F /* Pods-CRDISpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRDISpecs.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRDISpecs/Pods-CRDISpecs.release.xcconfig"; sourceTree = "<group>"; };
 		68ACD69817E75411003BA236 /* CRDiSingletoneBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDiSingletoneBuilderSpec.m; sourceTree = "<group>"; };
 		68ACD69B17E75956003BA236 /* CRDISingletoneBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDISingletoneBuilder.h; sourceTree = "<group>"; };
 		68ACD69C17E75956003BA236 /* CRDISingletoneBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDISingletoneBuilder.m; sourceTree = "<group>"; };
-		942E706A687C456799F5BBF6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9327771A74846319CA6BF9E /* Pods-CRDISpecs.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRDISpecs.xcconfig"; path = "Pods/Pods-CRDISpecs.xcconfig"; sourceTree = "<group>"; };
+		83CBD45BBAD7F7977375FC98 /* Pods-CRDISpecs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRDISpecs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRDISpecs/Pods-CRDISpecs.debug.xcconfig"; sourceTree = "<group>"; };
 		AD1857C117E9C8D700B0A886 /* CRDIPropertyNameMatcherSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIPropertyNameMatcherSpec.m; sourceTree = "<group>"; };
-		AD24C80A17E9D8BA00E0ED9E /* CRDIAutoInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDIAutoInjector.h; sourceTree = "<group>"; };
-		AD24C80B17E9D8BA00E0ED9E /* CRDIAutoInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIAutoInjector.m; sourceTree = "<group>"; };
-		AD24C80E17E9D91500E0ED9E /* CRDIAutoInjectorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIAutoInjectorSpec.m; sourceTree = "<group>"; };
 		AD24C81117E9D98D00E0ED9E /* CRDIInjectedClassChild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDIInjectedClassChild.h; sourceTree = "<group>"; };
 		AD24C81217E9D98D00E0ED9E /* CRDIInjectedClassChild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIInjectedClassChild.m; sourceTree = "<group>"; };
-		AD24C81417E9DEA600E0ED9E /* NSObject+AutoInject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AutoInject.h"; sourceTree = "<group>"; };
-		AD24C81517E9DEA600E0ED9E /* NSObject+AutoInject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AutoInject.m"; sourceTree = "<group>"; };
-		AD60410F17E9E57D00707FAF /* CRDIGlobalAutoInjectionStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDIGlobalAutoInjectionStorage.h; sourceTree = "<group>"; };
-		AD60411017E9E57D00707FAF /* CRDIGlobalAutoInjectionStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIGlobalAutoInjectionStorage.m; sourceTree = "<group>"; };
 		AD7A72CF17E9C1CF00602401 /* DIClassTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIClassTemplate.h; sourceTree = "<group>"; };
 		AD7A72D017E9C1CF00602401 /* DIClassTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIClassTemplate.m; sourceTree = "<group>"; };
 		AD7A72D217E9C1E000602401 /* DIPropertyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIPropertyModel.h; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		AD7A72DF17E9C7D500602401 /* CRDIPropertyNameMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDIPropertyNameMatcher.h; sourceTree = "<group>"; };
 		AD7A72E017E9C7EA00602401 /* CRDIDefaultPropertyNameMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDIDefaultPropertyNameMatcher.h; sourceTree = "<group>"; };
 		AD7A72E117E9C7EA00602401 /* CRDIDefaultPropertyNameMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIDefaultPropertyNameMatcher.m; sourceTree = "<group>"; };
+		E3855E7AEF98325E67AB4F20 /* libPods-CRDISpecs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CRDISpecs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA06443217E85F9C00CF1132 /* CRDIException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDIException.h; sourceTree = "<group>"; };
 		EA06443317E85F9C00CF1132 /* CRDIException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIException.m; sourceTree = "<group>"; };
 		EA0D365F17ED9CC10022E216 /* CRDISampeConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDISampeConfiguration.h; sourceTree = "<group>"; };
@@ -138,7 +141,6 @@
 		EA5B9E5417E739AA002A0D81 /* CRDISampleClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDISampleClass.m; sourceTree = "<group>"; };
 		EA5B9E5517E739AA002A0D81 /* CRDISampleProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDISampleProtocol.h; sourceTree = "<group>"; };
 		EA5B9E5C17E73C94002A0D81 /* CRDIBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIBuilderSpec.m; sourceTree = "<group>"; };
-		F9BD4F43A3CD4BC6BC0014EA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +149,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA16E22F17E7358100F90D98 /* Foundation.framework in Frameworks */,
-				E25764918F7C42B1801BDC47 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,13 +158,32 @@
 			files = (
 				EA5B9E3D17E735C1002A0D81 /* Foundation.framework in Frameworks */,
 				EA5B9E3C17E735C1002A0D81 /* SenTestingKit.framework in Frameworks */,
-				4A8DAB7A2B134E5585DBAADE /* libPods-CRDISpecs.a in Frameworks */,
+				FAF6DDA91552E28B36E2A725 /* libPods-CRDISpecs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44A35FFB1F1CF50F00D37278 /* RuntimeHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				44A35FFF1F1CF67800D37278 /* RTProtocol.m */,
+				44A360001F1CF67800D37278 /* RTProtocol.h */,
+				44A360011F1CF67800D37278 /* RTUnregisteredClass.m */,
+				44A360021F1CF67800D37278 /* RTUnregisteredClass.h */,
+				44A360031F1CF67800D37278 /* RTMethod.m */,
+				44A360041F1CF67800D37278 /* RTMethod.h */,
+				44A360051F1CF67800D37278 /* RTIvar.m */,
+				44A360061F1CF67800D37278 /* RTIvar.h */,
+				44A360071F1CF67800D37278 /* MARTNSObject.m */,
+				44A360081F1CF67800D37278 /* MARTNSObject.h */,
+				44A35FFC1F1CF50F00D37278 /* RTProperty.h */,
+				44A35FFD1F1CF50F00D37278 /* RTProperty.m */,
+			);
+			path = RuntimeHelpers;
+			sourceTree = "<group>";
+		};
 		68ACD69A17E7593E003BA236 /* DISingletoneBuilder */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,19 +191,6 @@
 				68ACD69C17E75956003BA236 /* CRDISingletoneBuilder.m */,
 			);
 			path = DISingletoneBuilder;
-			sourceTree = "<group>";
-		};
-		AD24C80917E9D8AA00E0ED9E /* AutoInjector */ = {
-			isa = PBXGroup;
-			children = (
-				AD24C80A17E9D8BA00E0ED9E /* CRDIAutoInjector.h */,
-				AD24C80B17E9D8BA00E0ED9E /* CRDIAutoInjector.m */,
-				AD24C81417E9DEA600E0ED9E /* NSObject+AutoInject.h */,
-				AD24C81517E9DEA600E0ED9E /* NSObject+AutoInject.m */,
-				AD60410F17E9E57D00707FAF /* CRDIGlobalAutoInjectionStorage.h */,
-				AD60411017E9E57D00707FAF /* CRDIGlobalAutoInjectionStorage.m */,
-			);
-			path = AutoInjector;
 			sourceTree = "<group>";
 		};
 		AD7A72CC17E9C18400602401 /* DIClassInspection */ = {
@@ -226,6 +233,15 @@
 			path = PropertyMatcher;
 			sourceTree = "<group>";
 		};
+		E9E5E5B78D75396E14E79081 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83CBD45BBAD7F7977375FC98 /* Pods-CRDISpecs.debug.xcconfig */,
+				517C9CFEC610556874A9F14F /* Pods-CRDISpecs.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EA06442E17E85F2000CF1132 /* DIException */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,8 +258,7 @@
 				EA5B9E4017E735C1002A0D81 /* CRDI Tests */,
 				EA16E22D17E7358100F90D98 /* Frameworks */,
 				EA16E22C17E7358100F90D98 /* Products */,
-				A9327771A74846319CA6BF9E /* Pods-CRDISpecs.xcconfig */,
-				F9BD4F43A3CD4BC6BC0014EA /* Pods.xcconfig */,
+				E9E5E5B78D75396E14E79081 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -261,8 +276,7 @@
 			children = (
 				EA16E22E17E7358100F90D98 /* Foundation.framework */,
 				EA5B9E3B17E735C1002A0D81 /* SenTestingKit.framework */,
-				237FFA4A0C19449FB18A9784 /* libPods-CRDISpecs.a */,
-				942E706A687C456799F5BBF6 /* libPods.a */,
+				E3855E7AEF98325E67AB4F20 /* libPods-CRDISpecs.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -287,7 +301,7 @@
 		EA5B9E1C17E735B2002A0D81 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				AD24C80917E9D8AA00E0ED9E /* AutoInjector */,
+				44A35FFB1F1CF50F00D37278 /* RuntimeHelpers */,
 				AD7A72CC17E9C18400602401 /* DIClassInspection */,
 				EA06442E17E85F2000CF1132 /* DIException */,
 				EA5B9E1D17E735B2002A0D81 /* Defines */,
@@ -382,7 +396,6 @@
 				EA435CBC17E9B37C007F3878 /* CRDIInjectorSpec.m */,
 				AD7A72D817E9C2D100602401 /* CRDIClassInspectorSpec.m */,
 				AD1857C117E9C8D700B0A886 /* CRDIPropertyNameMatcherSpec.m */,
-				AD24C80E17E9D91500E0ED9E /* CRDIAutoInjectorSpec.m */,
 				EA5B9E5017E739AA002A0D81 /* CRDITestObjects */,
 				EA5B9E4117E735C1002A0D81 /* Supporting Files */,
 			);
@@ -422,11 +435,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA16E23917E7358100F90D98 /* Build configuration list for PBXNativeTarget "CRDI" */;
 			buildPhases = (
-				551611F93C4F48409368A111 /* Check Pods Manifest.lock */,
 				EA16E22717E7358100F90D98 /* Sources */,
 				EA16E22817E7358100F90D98 /* Frameworks */,
 				EA16E22917E7358100F90D98 /* CopyFiles */,
-				5B1FE226F4B44ECBBECC81EF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -441,11 +452,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA5B9E4B17E735C1002A0D81 /* Build configuration list for PBXNativeTarget "CRDISpecs" */;
 			buildPhases = (
-				B8950B589AC54474862195E6 /* Check Pods Manifest.lock */,
+				A477474395F9DBD5AC1938A9 /* [CP] Check Pods Manifest.lock */,
 				EA5B9E3617E735C1002A0D81 /* Sources */,
 				EA5B9E3717E735C1002A0D81 /* Frameworks */,
 				EA5B9E3817E735C1002A0D81 /* Resources */,
-				4C64EA8D13A9431295DFE483 /* Copy Pods Resources */,
+				BA8471AA99CBDEA4C00112AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -502,64 +513,35 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4C64EA8D13A9431295DFE483 /* Copy Pods Resources */ = {
+		A477474395F9DBD5AC1938A9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-CRDISpecs-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		551611F93C4F48409368A111 /* Check Pods Manifest.lock */ = {
+		BA8471AA99CBDEA4C00112AC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CRDISpecs/Pods-CRDISpecs-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		5B1FE226F4B44ECBBECC81EF /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B8950B589AC54474862195E6 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sanbox is not in sync with the Podfile.lock. Run 'pod install'.\nEOM\n    exit 1\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -568,20 +550,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44A35FFE1F1CF50F00D37278 /* RTProperty.m in Sources */,
 				AD7A72D117E9C1CF00602401 /* DIClassTemplate.m in Sources */,
 				AD7A72D417E9C1E000602401 /* DIPropertyModel.m in Sources */,
 				EA5B9E3517E735B2002A0D81 /* CRDIInjector.m in Sources */,
+				44A3600C1F1CF67800D37278 /* RTIvar.m in Sources */,
 				EA5B9E3217E735B2002A0D81 /* CRDIClassBuilder.m in Sources */,
+				44A3600A1F1CF67800D37278 /* RTUnregisteredClass.m in Sources */,
 				EA5B9E3117E735B2002A0D81 /* CRDIBlockBuilder.m in Sources */,
-				AD60411117E9E57D00707FAF /* CRDIGlobalAutoInjectionStorage.m in Sources */,
+				44A3600D1F1CF67800D37278 /* MARTNSObject.m in Sources */,
 				EA5B9E3317E735B2002A0D81 /* CRDIConfigratuion.m in Sources */,
-				AD24C80C17E9D8BA00E0ED9E /* CRDIAutoInjector.m in Sources */,
+				44A3600B1F1CF67800D37278 /* RTMethod.m in Sources */,
 				EA5B9E3417E735B2002A0D81 /* CRDIContainer.m in Sources */,
-				AD24C81617E9DEA600E0ED9E /* NSObject+AutoInject.m in Sources */,
 				68ACD69D17E75956003BA236 /* CRDISingletoneBuilder.m in Sources */,
 				AD7A72E217E9C7EA00602401 /* CRDIDefaultPropertyNameMatcher.m in Sources */,
 				AD7A72D717E9C24200602401 /* CRDIClassInspector.m in Sources */,
 				EA06443417E85F9C00CF1132 /* CRDIException.m in Sources */,
+				44A360091F1CF67800D37278 /* RTProtocol.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,16 +575,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5B9E5717E739AA002A0D81 /* CRDISampleClass.m in Sources */,
-				AD24C81717E9DEA700E0ED9E /* NSObject+AutoInject.m in Sources */,
 				EA5B9E5617E739AA002A0D81 /* CRDIInjectedClass.m in Sources */,
 				EA5B9E5E17E7493C002A0D81 /* CRDIBlockBuilder.m in Sources */,
 				EA58219017E865A10043406A /* CRDIConfigurationSpec.m in Sources */,
 				EA435CBD17E9B37C007F3878 /* CRDIInjectorSpec.m in Sources */,
-				AD60411217E9E57D00707FAF /* CRDIGlobalAutoInjectionStorage.m in Sources */,
 				AD7A72DD17E9C59200602401 /* DIPropertyModel.m in Sources */,
 				EA0D367717EDA8B90022E216 /* CRDIConfigratuion.m in Sources */,
-				AD24C80D17E9D8BA00E0ED9E /* CRDIAutoInjector.m in Sources */,
-				AD24C81017E9D91500E0ED9E /* CRDIAutoInjectorSpec.m in Sources */,
 				68ACD69E17E75956003BA236 /* CRDISingletoneBuilder.m in Sources */,
 				EA5B9E5D17E73C94002A0D81 /* CRDIBuilderSpec.m in Sources */,
 				EA5B9E5F17E7493E002A0D81 /* CRDIClassBuilder.m in Sources */,
@@ -698,7 +679,6 @@
 		};
 		EA16E23A17E7358100F90D98 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9BD4F43A3CD4BC6BC0014EA /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/CRDI.dst;
@@ -714,7 +694,6 @@
 		};
 		EA16E23B17E7358100F90D98 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9BD4F43A3CD4BC6BC0014EA /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/CRDI.dst;
@@ -730,7 +709,7 @@
 		};
 		EA5B9E4C17E735C1002A0D81 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9327771A74846319CA6BF9E /* Pods-CRDISpecs.xcconfig */;
+			baseConfigurationReference = 83CBD45BBAD7F7977375FC98 /* Pods-CRDISpecs.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_MODULES = YES;
@@ -764,7 +743,7 @@
 		};
 		EA5B9E4D17E735C1002A0D81 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9327771A74846319CA6BF9E /* Pods-CRDISpecs.xcconfig */;
+			baseConfigurationReference = 517C9CFEC610556874A9F14F /* Pods-CRDISpecs.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_MODULES = YES;

@@ -7,8 +7,8 @@
 //
 
 #import "CRDIClassInspector.h"
-#import <MAObjCRuntime/MARTNSObject.h>
-#import <MAObjCRuntime/RTProperty.h>
+#import "MARTNSObject.h"
+#import "RTProperty.h"
 #import "CRDIDefaultPropertyNameMatcher.h"
 
 @interface CRDIClassInspector ()
