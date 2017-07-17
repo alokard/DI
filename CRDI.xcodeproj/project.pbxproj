@@ -1032,7 +1032,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv7 armv7s i386";
+				VALID_ARCHS = "arm7s arm7 arm64";
 			};
 			name = Debug;
 		};
@@ -1057,7 +1057,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s i386";
+				VALID_ARCHS = "arm7s arm7 arm64";
 			};
 			name = Release;
 		};
