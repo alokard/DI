@@ -8,6 +8,8 @@
 
 #import "CRDIContainer.h"
 
+#import "CRDIDependencyBuilder.h"
+#import "CRDIException.h"
 #import "CRDIClassBuilder.h"
 #import "CRDIBlockBuilder.h"
 #import "CRDISingletoneBuilder.h"

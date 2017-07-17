@@ -16,6 +16,7 @@ FOUNDATION_EXPORT double CRDIVersionNumber;
 FOUNDATION_EXPORT const unsigned char CRDIVersionString[];
 
 
+#import <CRDI/CRDITypedefs.h>
 #import <CRDI/CRDIConfiguration.h>
 #import <CRDI/CRDIContainer.h>
 #import <CRDI/CRDIInjector.h>

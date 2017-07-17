@@ -6,11 +6,12 @@
 //  Copyright (c) 2013 CriolloKit. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 #import "CRDITypedefs.h"
-#import "CRDIDependencyBuilder.h"
-#import "CRDIException.h"
 
 @class CRDIConfiguration;
+@protocol CRDIDependencyBuilder;
 
 @interface CRDIContainer : NSObject
 

@@ -7,6 +7,7 @@
 //
 
 #import "CRDIConfiguration.h"
+#import "CRDIException.h"
 
 @interface CRDIConfiguration ()
 

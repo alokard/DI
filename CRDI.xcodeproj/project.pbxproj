@@ -39,7 +39,7 @@
 		44A360531F1D077E00D37278 /* CRDIClassInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = AD7A72D517E9C24200602401 /* CRDIClassInspector.h */; };
 		44A360541F1D07A600D37278 /* CRDIException.h in Headers */ = {isa = PBXBuildFile; fileRef = EA06443217E85F9C00CF1132 /* CRDIException.h */; };
 		44A360551F1D07A600D37278 /* CRDIException.m in Sources */ = {isa = PBXBuildFile; fileRef = EA06443317E85F9C00CF1132 /* CRDIException.m */; };
-		44A360561F1D07B100D37278 /* CRDITypedefs.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B9E1E17E735B2002A0D81 /* CRDITypedefs.h */; };
+		44A360561F1D07B100D37278 /* CRDITypedefs.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B9E1E17E735B2002A0D81 /* CRDITypedefs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44A360571F1D07BB00D37278 /* CRDISingletoneBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 68ACD69B17E75956003BA236 /* CRDISingletoneBuilder.h */; };
 		44A360581F1D07BB00D37278 /* CRDISingletoneBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ACD69C17E75956003BA236 /* CRDISingletoneBuilder.m */; };
 		44A360591F1D07C500D37278 /* CRDIBlockBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B9E2117E735B2002A0D81 /* CRDIBlockBuilder.h */; };

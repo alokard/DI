@@ -7,6 +7,8 @@
 //
 
 #import "CRDIInjector.h"
+#import "CRDIDependencyBuilder.h"
+#import "CRDIException.h"
 #import "DIClassTemplate.h"
 #import "CRDIClassInspector.h"
 
