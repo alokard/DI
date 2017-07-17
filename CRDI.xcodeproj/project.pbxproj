@@ -13,7 +13,7 @@
 		44A3600B1F1CF67800D37278 /* RTMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A360031F1CF67800D37278 /* RTMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		44A3600C1F1CF67800D37278 /* RTIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A360051F1CF67800D37278 /* RTIvar.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		44A3600D1F1CF67800D37278 /* MARTNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A360071F1CF67800D37278 /* MARTNSObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		44A360311F1D06DF00D37278 /* CRDI_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44A360281F1D06DF00D37278 /* CRDI_iOS.framework */; };
+		44A360311F1D06DF00D37278 /* CRDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44A360281F1D06DF00D37278 /* CRDI.framework */; };
 		44A360361F1D06DF00D37278 /* CRDI_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A360351F1D06DF00D37278 /* CRDI_iOSTests.m */; };
 		44A360381F1D06DF00D37278 /* CRDI-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 44A3602A1F1D06DF00D37278 /* CRDI-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44A3603F1F1D06F300D37278 /* RTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A35FFF1F1CF67800D37278 /* RTProtocol.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -137,7 +137,7 @@
 		44A360061F1CF67800D37278 /* RTIvar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTIvar.h; sourceTree = "<group>"; };
 		44A360071F1CF67800D37278 /* MARTNSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARTNSObject.m; sourceTree = "<group>"; };
 		44A360081F1CF67800D37278 /* MARTNSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARTNSObject.h; sourceTree = "<group>"; };
-		44A360281F1D06DF00D37278 /* CRDI_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CRDI_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44A360281F1D06DF00D37278 /* CRDI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CRDI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A3602A1F1D06DF00D37278 /* CRDI-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRDI-iOS.h"; sourceTree = "<group>"; };
 		44A3602B1F1D06DF00D37278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44A360301F1D06DF00D37278 /* CRDI-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CRDI-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,7 +167,7 @@
 		EA06443317E85F9C00CF1132 /* CRDIException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDIException.m; sourceTree = "<group>"; };
 		EA0D365F17ED9CC10022E216 /* CRDISampeConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDISampeConfiguration.h; sourceTree = "<group>"; };
 		EA0D366017ED9CC10022E216 /* CRDISampeConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDISampeConfiguration.m; sourceTree = "<group>"; };
-		EA16E22B17E7358100F90D98 /* libCRDI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCRDI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA16E22B17E7358100F90D98 /* libCRDI_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCRDI_iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA16E22E17E7358100F90D98 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA16E23217E7358100F90D98 /* CRDI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRDI-Prefix.pch"; sourceTree = "<group>"; };
 		EA435CA717E98BDC007F3878 /* CRDIInstanceInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDIInstanceInjector.h; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44A360311F1D06DF00D37278 /* CRDI_iOS.framework in Frameworks */,
+				44A360311F1D06DF00D37278 /* CRDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,9 +356,9 @@
 		EA16E22C17E7358100F90D98 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA16E22B17E7358100F90D98 /* libCRDI.a */,
+				EA16E22B17E7358100F90D98 /* libCRDI_iOS.a */,
 				EA5B9E3A17E735C1002A0D81 /* CRDISpecs.octest */,
-				44A360281F1D06DF00D37278 /* CRDI_iOS.framework */,
+				44A360281F1D06DF00D37278 /* CRDI.framework */,
 				44A360301F1D06DF00D37278 /* CRDI-iOSTests.xctest */,
 			);
 			name = Products;
@@ -558,9 +558,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		44A360271F1D06DF00D37278 /* CRDI_iOS */ = {
+		44A360271F1D06DF00D37278 /* CRDI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 44A3603D1F1D06DF00D37278 /* Build configuration list for PBXNativeTarget "CRDI_iOS" */;
+			buildConfigurationList = 44A3603D1F1D06DF00D37278 /* Build configuration list for PBXNativeTarget "CRDI" */;
 			buildPhases = (
 				44A360231F1D06DF00D37278 /* Sources */,
 				44A360241F1D06DF00D37278 /* Frameworks */,
@@ -571,9 +571,9 @@
 			);
 			dependencies = (
 			);
-			name = CRDI_iOS;
+			name = CRDI;
 			productName = "CRDI-iOS";
-			productReference = 44A360281F1D06DF00D37278 /* CRDI_iOS.framework */;
+			productReference = 44A360281F1D06DF00D37278 /* CRDI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		44A3602F1F1D06DF00D37278 /* CRDI-iOSTests */ = {
@@ -594,9 +594,9 @@
 			productReference = 44A360301F1D06DF00D37278 /* CRDI-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EA16E22A17E7358100F90D98 /* CRDI */ = {
+		EA16E22A17E7358100F90D98 /* CRDI_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA16E23917E7358100F90D98 /* Build configuration list for PBXNativeTarget "CRDI" */;
+			buildConfigurationList = EA16E23917E7358100F90D98 /* Build configuration list for PBXNativeTarget "CRDI_iOS" */;
 			buildPhases = (
 				EA16E22717E7358100F90D98 /* Sources */,
 				EA16E22817E7358100F90D98 /* Frameworks */,
@@ -606,9 +606,9 @@
 			);
 			dependencies = (
 			);
-			name = CRDI;
+			name = CRDI_iOS;
 			productName = CRDI;
-			productReference = EA16E22B17E7358100F90D98 /* libCRDI.a */;
+			productReference = EA16E22B17E7358100F90D98 /* libCRDI_iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		EA5B9E3917E735C1002A0D81 /* CRDISpecs */ = {
@@ -668,9 +668,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA16E22A17E7358100F90D98 /* CRDI */,
+				EA16E22A17E7358100F90D98 /* CRDI_iOS */,
 				EA5B9E3917E735C1002A0D81 /* CRDISpecs */,
-				44A360271F1D06DF00D37278 /* CRDI_iOS */,
+				44A360271F1D06DF00D37278 /* CRDI */,
 				44A3602F1F1D06DF00D37278 /* CRDI-iOSTests */,
 			);
 		};
@@ -825,12 +825,12 @@
 /* Begin PBXTargetDependency section */
 		44A360331F1D06DF00D37278 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 44A360271F1D06DF00D37278 /* CRDI_iOS */;
+			target = 44A360271F1D06DF00D37278 /* CRDI */;
 			targetProxy = 44A360321F1D06DF00D37278 /* PBXContainerItemProxy */;
 		};
 		EA5B9E4A17E735C1002A0D81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA16E22A17E7358100F90D98 /* CRDI */;
+			target = EA16E22A17E7358100F90D98 /* CRDI_iOS */;
 			targetProxy = EA5B9E4917E735C1002A0D81 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1159,13 +1159,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		44A3603D1F1D06DF00D37278 /* Build configuration list for PBXNativeTarget "CRDI_iOS" */ = {
+		44A3603D1F1D06DF00D37278 /* Build configuration list for PBXNativeTarget "CRDI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				44A360391F1D06DF00D37278 /* Debug */,
 				44A3603A1F1D06DF00D37278 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		44A3603E1F1D06DF00D37278 /* Build configuration list for PBXNativeTarget "CRDI-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1174,6 +1175,7 @@
 				44A3603C1F1D06DF00D37278 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 		EA16E22617E7358100F90D98 /* Build configuration list for PBXProject "CRDI" */ = {
 			isa = XCConfigurationList;
@@ -1184,7 +1186,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		EA16E23917E7358100F90D98 /* Build configuration list for PBXNativeTarget "CRDI" */ = {
+		EA16E23917E7358100F90D98 /* Build configuration list for PBXNativeTarget "CRDI_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA16E23A17E7358100F90D98 /* Debug */,
