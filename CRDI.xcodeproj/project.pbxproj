@@ -54,6 +54,7 @@
 		44A360621F1D085F00D37278 /* CRDIInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5B9E2E17E735B2002A0D81 /* CRDIInjector.m */; };
 		44A360631F1D086A00D37278 /* CRDIDependencyBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5B9E3017E735B2002A0D81 /* CRDIDependencyBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44A360641F1D086A00D37278 /* CRDIInstanceInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = EA435CA717E98BDC007F3878 /* CRDIInstanceInjector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		44A360661F1D08E300D37278 /* CRDI.h in Headers */ = {isa = PBXBuildFile; fileRef = 44A360651F1D08E300D37278 /* CRDI.h */; };
 		68ACD69917E75411003BA236 /* CRDiSingletoneBuilderSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ACD69817E75411003BA236 /* CRDiSingletoneBuilderSpec.m */; };
 		68ACD69D17E75956003BA236 /* CRDISingletoneBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ACD69C17E75956003BA236 /* CRDISingletoneBuilder.m */; };
 		68ACD69E17E75956003BA236 /* CRDISingletoneBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 68ACD69C17E75956003BA236 /* CRDISingletoneBuilder.m */; };
@@ -142,6 +143,7 @@
 		44A360301F1D06DF00D37278 /* CRDI-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CRDI-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A360351F1D06DF00D37278 /* CRDI_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRDI_iOSTests.m; sourceTree = "<group>"; };
 		44A360371F1D06DF00D37278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44A360651F1D08E300D37278 /* CRDI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDI.h; sourceTree = "<group>"; };
 		517C9CFEC610556874A9F14F /* Pods-CRDISpecs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRDISpecs.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRDISpecs/Pods-CRDISpecs.release.xcconfig"; sourceTree = "<group>"; };
 		68ACD69817E75411003BA236 /* CRDiSingletoneBuilderSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDiSingletoneBuilderSpec.m; sourceTree = "<group>"; };
 		68ACD69B17E75956003BA236 /* CRDISingletoneBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRDISingletoneBuilder.h; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 			children = (
 				EA5B9E1C17E735B2002A0D81 /* Code */,
 				EA16E23117E7358100F90D98 /* Supporting Files */,
+				44A360651F1D08E300D37278 /* CRDI.h */,
 			);
 			path = CRDI;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 				44A3604B1F1D076600D37278 /* CRDIPropertyNameMatcher.h in Headers */,
 				44A360571F1D07BB00D37278 /* CRDISingletoneBuilder.h in Headers */,
 				44A360481F1D06F300D37278 /* MARTNSObject.h in Headers */,
+				44A360661F1D08E300D37278 /* CRDI.h in Headers */,
 				44A360631F1D086A00D37278 /* CRDIDependencyBuilder.h in Headers */,
 				44A3605D1F1D084B00D37278 /* CRDIConfiguration.h in Headers */,
 				44A360421F1D06F300D37278 /* RTUnregisteredClass.h in Headers */,
